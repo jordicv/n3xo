@@ -1,0 +1,141 @@
+---
+// IntegrationSection Component - La Línea Insignia: Phygital (OOH + Digital)
+const steps = [
+  {
+    step: '01',
+    title: 'Impacto Físico en la Calle',
+    desc: 'Tu marca se posiciona en las avenidas, autopistas o pantallas LED de mayor flujo vehicular y peatonal con visuales de máximo tamaño y calidad.',
+    icon: 'M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z',
+  },
+  {
+    step: '02',
+    title: 'Puente Interactivo Directo',
+    desc: 'El soporte físico integra códigos QR dinámicos con trazabilidad geográfica y llamados a la acción diseñados para provocar la interacción en segundos.',
+    icon: 'M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z',
+  },
+  {
+    step: '03',
+    title: 'Experiencia Móvil Ultrarrápida',
+    desc: 'El usuario accede de inmediato a una landing page de carga instantánea optimizada para celulares, con formularios de compra, catálogos o beneficios exclusivos.',
+    icon: 'M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z',
+  },
+  {
+    step: '04',
+    title: 'Atribución y Métricas Claras',
+    desc: 'Generamos reportes con datos observados: visitas efectivas, escaneos por ubicación física y conversiones reales, complementando las estimaciones de circulación.',
+    icon: 'M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z',
+  },
+];
+---
+
+<section id="integracion" class="relative py-24 sm:py-32 bg-obsidian border-t border-white/5 overflow-hidden">
+  
+  <!-- Ambient Glow in the Center -->
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-violet/15 rounded-full blur-[160px] pointer-events-none"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    
+    <!-- Flagship Header -->
+    <div class="text-center max-w-3xl mx-auto mb-20">
+      <div class="reveal-item inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-violet/20 border border-brand-violet/40 text-xs font-mono uppercase tracking-widest text-brand-neon mb-5">
+        <span class="w-2 h-2 rounded-full bg-brand-neon animate-pulse"></span>
+        <span>LÍNEA INSIGNIA N3XO</span>
+      </div>
+
+      <h2 class="reveal-item font-display font-bold text-3xl sm:text-5xl md:text-6xl text-white tracking-tight mb-6">
+        Integration: <br />
+        <span class="text-gradient">OOH + DIGITAL</span>
+      </h2>
+
+      <p class="reveal-item text-brand-silver text-base sm:text-xl leading-relaxed">
+        Convertimos campañas aisladas en experiencias conectadas. Unimos la magnitud visual de la vía pública con la conversión, trazabilidad y velocidad del mundo digital.
+      </p>
+    </div>
+
+    <!-- Step Flow Diagram (Apple-style Staggered Grid) -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-16">
+      {steps.map((st) => (
+        <div class="reveal-item glass-panel rounded-3xl p-6 sm:p-8 flex flex-col justify-between relative group hover:border-brand-neon/50 transition-all duration-300 hover:-translate-y-1">
+          <div>
+            <!-- Step Counter and Icon -->
+            <div class="flex items-center justify-between mb-6">
+              <span class="text-2xl font-display font-bold text-brand-neon font-mono">{st.step}</span>
+              <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-white group-hover:scale-110 group-hover:bg-brand-violet/30 transition-all duration-300">
+                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d={st.icon} />
+                </svg>
+              </div>
+            </div>
+
+            <h3 class="font-display font-bold text-xl text-white mb-3 group-hover:text-brand-neon transition-colors">
+              {st.title}
+            </h3>
+
+            <p class="text-xs sm:text-sm text-brand-silver leading-relaxed">
+              {st.desc}
+            </p>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-white/5">
+            <span class="text-[11px] font-mono text-brand-neon/80 tracking-wider uppercase">Fase Sincronizada</span>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Phygital Real-world Features Banner -->
+    <div class="reveal-item glass-panel rounded-3xl p-8 sm:p-12 border border-brand-violet/40 bg-gradient-to-br from-brand-violet/10 via-obsidian-surface to-brand-neon/10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <div class="lg:col-span-7">
+          <div class="inline-flex items-center gap-2 text-xs font-mono text-brand-lavender uppercase tracking-wider mb-3">
+            <span>DIFERENCIADOR ESTRATÉGICO</span>
+          </div>
+          <h3 class="font-display font-bold text-2xl sm:text-3xl text-white mb-4">
+            ¿Por qué elegir una campaña integrada N3XO?
+          </h3>
+          <p class="text-sm text-brand-silver leading-relaxed mb-6">
+            Una valla tradicional o una pantalla LED por sí solas generan recordación visual. Pero cuando se integran con códigos QR medibles, páginas de aterrizaje ultrarrápidas y pauta digital geosegmentada, la vía pública se convierte en el inicio de un embudo comercial directo y medible.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm text-white/90">
+            <div class="flex items-center gap-2.5">
+              <span class="text-brand-neon font-bold">✦</span>
+              <span>QR interactivos con atribución por soporte</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <span class="text-brand-neon font-bold">✦</span>
+              <span>Sincronización de pantallas LED con redes</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <span class="text-brand-neon font-bold">✦</span>
+              <span>Landing pages ultralivianas en segundos</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <span class="text-brand-neon font-bold">✦</span>
+              <span>Reportes de rendimiento transparentes</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 flex flex-col items-center justify-center p-6 rounded-2xl bg-white/[0.03] border border-white/10 text-center">
+          <span class="text-4xl mb-3">📡 ↔️ 📱</span>
+          <div class="font-display font-bold text-lg text-white mb-2">Diseña tu Campaña 360°</div>
+          <p class="text-xs text-brand-silver mb-6 max-w-xs">
+            Coordinamos la gráfica en la calle, la producción y el desarrollo web en una sola propuesta unificada.
+          </p>
+          <a
+            href="https://wa.me/56932346724?text=Hola%20N3XO,%20quiero%20cotizar%20una%20campa%C3%B1a%20integrada%20OOH%20%2B%20Digital."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center px-6 py-3 rounded-full bg-gradient-to-r from-brand-violet to-brand-neon text-xs font-semibold text-white tracking-wider uppercase shadow-lg hover:scale-105 active:scale-95 transition-all"
+          >
+            Cotizar Campaña Integrada
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>

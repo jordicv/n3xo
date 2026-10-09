@@ -1,0 +1,139 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import WhatsAppDual from '../../components/WhatsAppDual.astro';
+import Footer from '../../components/Footer.astro';
+
+const servicesOverview = [
+  {
+    title: 'OOH · Publicidad Exterior',
+    subtitle: 'Dominio visual en vía pública a escala nacional.',
+    badge: 'PRESENCIA FÍSICA',
+    link: '/servicios/ooh',
+    icon: '🏙️',
+    desc: 'Soportes urbanos, paletas publicitarias, vallas camineras en autopistas, pantallas LED de alta resolución, intervenciones BTL y flotas vehiculares.',
+    items: ['Soportes Urbanos', 'Vallas Camineras', 'Pantallas LED / DOOH', 'Proyectos Especiales', 'OOH Móvil (Flotas)'],
+    ctaText: 'Ver Soportes OOH →',
+  },
+  {
+    title: 'Digital & Software',
+    subtitle: 'Ingeniería y plataformas con precisión alemana.',
+    badge: 'INGENIERÍA & CÓDIGO',
+    link: '/servicios/digital',
+    icon: '💻',
+    desc: 'Desarrollo web corporativo de alto rendimiento, software a medida, e-commerce, sistemas de gestión, automatización de procesos e inteligencia artificial.',
+    items: ['Desarrollo Web & E-commerce', 'Software a Medida', 'Marketing Digital', 'Publicidad en Meta & Google Ads', 'Automatización e IA'],
+    ctaText: 'Ver Soluciones Digitales →',
+  },
+  {
+    title: 'Integration · Phygital 360°',
+    subtitle: 'La línea insignia: conexión física + digital.',
+    badge: 'LÍNEA INSIGNIA',
+    link: '/servicios/integracion',
+    icon: '⚡',
+    desc: 'Campañas que conectan la calle con los datos: soportes con QR dinámico trazable, sincronización de pantallas LED, landing pages móviles y atribución medible.',
+    items: ['Campañas Integradas 360°', 'QR Dinámico con Trazabilidad', 'Pantallas Sincronizadas', 'Landing Pages Ultralivianas', 'Métricas Reales Observadas'],
+    ctaText: 'Ver Línea Phygital →',
+    featured: true,
+  },
+];
+---
+
+<Layout
+  title="Servicios — OOH, Digital & Integración Phygital | N3XO.CL"
+  description="Conoce las tres áreas comerciales de N3XO: Publicidad Exterior (OOH), Desarrollo Digital & Software, y nuestra línea insignia de Campañas Integradas Phygital 360°."
+>
+  <Navbar />
+
+  <main class="pt-20">
+    
+    <!-- Hero Header -->
+    <section class="py-20 sm:py-28 bg-obsidian border-b border-white/5 text-center relative overflow-hidden">
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(196,91,255,0.12)_0%,transparent_70%)] pointer-events-none"></div>
+
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="reveal-item inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono uppercase tracking-wider text-brand-lavender mb-6">
+          <span>PORTAFOLIO DE CAPACIDADES</span>
+        </div>
+
+        <h1 class="reveal-item font-display font-bold text-4xl sm:text-6xl text-white tracking-tight mb-6">
+          Nuestras Áreas de <span class="text-gradient">Servicio</span>
+        </h1>
+
+        <p class="reveal-item text-base sm:text-xl text-brand-silver max-w-2xl mx-auto leading-relaxed">
+          Puedes contratar un soporte individual, un desarrollo tecnológico a medida o una campaña integrada de punta a punta.
+        </p>
+      </div>
+    </section>
+
+    <!-- Services Overview Cards -->
+    <section class="py-20 bg-obsidian-surface">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {servicesOverview.map((srv) => (
+            <div
+              class={`glass-panel rounded-3xl p-8 flex flex-col justify-between group transition-all duration-300 hover:-translate-y-1 relative ${srv.featured ? 'border-brand-neon/40 shadow-[0_0_40px_rgba(114,0,255,0.2)]' : 'hover:border-white/20'}`}
+            >
+              <div>
+                <div class="flex items-center justify-between mb-6">
+                  <span class="text-3xl">{srv.icon}</span>
+                  <span class={`px-3 py-1 rounded-full text-[10px] font-mono uppercase tracking-wider font-semibold ${srv.featured ? 'bg-brand-neon/20 text-brand-neon border border-brand-neon/40' : 'bg-white/5 text-brand-silver border border-white/10'}`}>
+                    {srv.badge}
+                  </span>
+                </div>
+
+                <h2 class="font-display font-bold text-2xl text-white mb-2 group-hover:text-brand-neon transition-colors">
+                  {srv.title}
+                </h2>
+                <p class="text-xs text-brand-silver font-mono mb-4">{srv.subtitle}</p>
+                <p class="text-xs sm:text-sm text-brand-silver leading-relaxed mb-6">{srv.desc}</p>
+
+                <ul class="space-y-2 text-xs text-white/90 mb-8">
+                  {srv.items.map((it) => (
+                    <li class="flex items-center gap-2">
+                      <span class="text-brand-neon font-bold">•</span>
+                      <span>{it}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div class="pt-6 border-t border-white/10 mt-auto">
+                <a
+                  href={srv.link}
+                  class={`w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-xs font-semibold uppercase tracking-wider transition-all duration-300 ${srv.featured ? 'bg-gradient-to-r from-brand-violet to-brand-neon text-white shadow-md hover:scale-[1.02]' : 'bg-white/5 hover:bg-white/10 text-white border border-white/10'}`}
+                >
+                  <span>{srv.ctaText}</span>
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Quick Quotation Action -->
+    <section class="py-16 bg-obsidian border-t border-white/5 text-center">
+      <div class="max-w-3xl mx-auto px-4">
+        <h3 class="font-display font-bold text-2xl sm:text-3xl text-white mb-3">
+          ¿Tienes dudas sobre qué formato se ajusta a tu presupuesto?
+        </h3>
+        <p class="text-xs sm:text-sm text-brand-silver mb-8">
+          Te asesoramos de forma personalizada desde la selección de soportes hasta la arquitectura técnica.
+        </p>
+        <a
+          href="/cotizar"
+          class="inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-gradient-to-r from-brand-violet to-brand-neon text-white text-xs font-semibold uppercase tracking-wider hover:scale-105 transition-all shadow-lg"
+        >
+          Solicitar Propuesta Personalizada
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <WhatsAppDual />
+  <Footer />
+</Layout>

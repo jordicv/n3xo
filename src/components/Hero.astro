@@ -1,0 +1,129 @@
+---
+// Hero Component
+---
+
+<section class="relative min-h-[100dvh] w-full flex items-center justify-center overflow-hidden pt-20">
+  
+  <!-- Video Background with Safe Fallback Poster -->
+  <div class="absolute inset-0 w-full h-full overflow-hidden">
+    <video
+      id="hero-video"
+      autoplay
+      loop
+      muted
+      playsinline
+      poster="/videos/banner_poster.jpg"
+      class="absolute inset-0 w-full h-full object-cover object-center scale-105 transition-transform duration-1000 ease-out"
+    >
+      <source src="/videos/banner_1080p.webm" type="video/webm" />
+      <source src="/videos/banner_1080p.mp4" type="video/mp4" />
+      <source src="/videos/banner_720p.mp4" type="video/mp4" />
+    </video>
+
+    <!-- Cinematic Subtle Gradient Overlays (Clear & High Visibility) -->
+    <div class="absolute inset-0 bg-obsidian/20"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-obsidian/70 via-transparent to-transparent"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/40 to-transparent"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(114,0,255,0.12)_0%,transparent_75%)]"></div>
+  </div>
+
+  <!-- Hero Main Content -->
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 text-center flex flex-col items-center">
+    
+    <!-- Top International Badge: High Contrast & Visibility -->
+    <div class="reveal-item inline-flex items-center gap-2 sm:gap-2.5 px-3.5 sm:px-5 py-1.5 sm:py-2 rounded-full bg-obsidian/90 sm:bg-obsidian/95 border border-brand-neon/50 backdrop-blur-2xl mb-8 shadow-[0_8px_30px_rgba(0,0,0,0.85)] hover:border-brand-neon hover:shadow-[0_0_30px_rgba(196,91,255,0.4)] transition-all duration-300 max-w-full">
+      <span class="relative flex h-2 w-2 sm:h-2.5 sm:w-2.5 flex-shrink-0">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-neon opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-2 w-2 sm:h-2.5 sm:w-2.5 bg-brand-neon shadow-[0_0_10px_#C45BFF]"></span>
+      </span>
+      <span class="text-[10px] sm:text-xs md:text-sm font-mono font-bold tracking-normal sm:tracking-wider uppercase text-white whitespace-nowrap drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)]">
+        +20 AÑOS DE EXPERIENCIA <span class="text-brand-neon/70 mx-1">·</span> <span class="text-brand-neon">CHILE × ALEMANIA</span>
+      </span>
+    </div>
+
+    <!-- Main Headline with Fluid Clamp Typography -->
+    <h1 class="reveal-item font-display font-bold text-4xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight text-white max-w-5xl leading-[1.08] mb-6 drop-shadow-[0_4px_24px_rgba(0,0,0,0.9)]">
+      Conectamos marcas con el mundo <span class="text-gradient">físico y digital</span>.
+    </h1>
+
+    <!-- Subtitle -->
+    <p class="reveal-item text-base sm:text-xl md:text-2xl text-white/90 max-w-3xl font-normal leading-relaxed mb-10 drop-shadow-[0_2px_12px_rgba(0,0,0,0.95)]">
+      Más de 20 años de experiencia y trayectoria en publicidad exterior de alto impacto en Chile, integrados con ingeniería de software moderna e innovación digital desde Alemania.
+    </p>
+
+    <!-- Dual Action Buttons -->
+    <div class="reveal-item flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-md sm:max-w-none mb-16">
+      
+      <!-- Primary: OOH Explorer -->
+      <a
+        href="/servicios/ooh"
+        class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-sm font-semibold tracking-wide uppercase text-white rounded-full bg-gradient-to-r from-brand-violet to-brand-neon hover:shadow-[0_0_30px_rgba(114,0,255,0.5)] transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] group"
+      >
+        <span>Explorar Soportes Vía Pública</span>
+        <svg class="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+        </svg>
+      </a>
+
+      <!-- Secondary: Digital Solutions -->
+      <a
+        href="/servicios/digital"
+        class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-sm font-semibold tracking-wide uppercase text-white rounded-full bg-obsidian/85 border border-white/20 hover:bg-obsidian hover:border-brand-lavender/60 backdrop-blur-xl transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] shadow-lg"
+      >
+        <span>Digital & Plataformas Web</span>
+      </a>
+
+      <!-- Tertiary: Phygital Spotlight -->
+      <a
+        href="/servicios/integracion"
+        class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-4 text-sm font-semibold tracking-wide uppercase text-brand-neon hover:text-white rounded-full bg-obsidian/85 border border-brand-neon/40 hover:bg-brand-neon/20 hover:border-brand-neon backdrop-blur-xl transition-all duration-300 shadow-lg"
+      >
+        <span class="mr-2">✦</span> Campañas Phygital 360°
+      </a>
+    </div>
+
+    <!-- Live Credibility Metrics Strip -->
+    <div class="reveal-item w-full max-w-5xl grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-6 pt-6 border-t border-white/10 text-left">
+      
+      <div class="glass-panel rounded-2xl p-4 sm:p-5 transition-transform duration-300 hover:-translate-y-1">
+        <div class="flex items-center gap-2 text-brand-neon mb-1 text-xs font-mono uppercase tracking-wider">
+          <span class="w-2 h-2 rounded-full bg-brand-neon"></span>
+          +20 Años de Trayectoria
+        </div>
+        <div class="text-lg sm:text-xl font-display font-semibold text-white">Experiencia Comprobada</div>
+        <div class="text-xs text-brand-silver mt-1">Más de dos décadas gestionando vía pública y relaciones comerciales sólidas en Chile.</div>
+      </div>
+
+      <div class="glass-panel rounded-2xl p-4 sm:p-5 transition-transform duration-300 hover:-translate-y-1">
+        <div class="flex items-center gap-2 text-brand-lavender mb-1 text-xs font-mono uppercase tracking-wider">
+          <span class="w-2 h-2 rounded-full bg-brand-lavender"></span>
+          Ingeniería Alemana
+        </div>
+        <div class="text-lg sm:text-xl font-display font-semibold text-white">Software & Web a Medida</div>
+        <div class="text-xs text-brand-silver mt-1">Plataformas escalables, e-commerce, automatización e IA.</div>
+      </div>
+
+      <div class="glass-panel rounded-2xl p-4 sm:p-5 transition-transform duration-300 hover:-translate-y-1">
+        <div class="flex items-center gap-2 text-brand-violet mb-1 text-xs font-mono uppercase tracking-wider">
+          <span class="w-2 h-2 rounded-full bg-brand-violet"></span>
+          La Línea Insignia
+        </div>
+        <div class="text-lg sm:text-xl font-display font-semibold text-white">Integración Phygital</div>
+        <div class="text-xs text-brand-silver mt-1">Medición de campañas, QR dinámicos, geofencing y analítica.</div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Subtle Scroll Down Indicator -->
+  <div class="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 hidden sm:flex flex-col items-center opacity-70 hover:opacity-100 transition-opacity">
+    <a href="#puente" aria-label="Scroll to content" class="flex flex-col items-center gap-2 text-brand-silver hover:text-white">
+      <span class="text-[10px] uppercase font-mono tracking-widest">Scroll</span>
+      <div class="w-5 h-9 rounded-full border border-white/20 flex items-start justify-center p-1">
+        <div class="w-1.5 h-2 rounded-full bg-brand-neon animate-bounce"></div>
+      </div>
+    </a>
+  </div>
+
+</section>

@@ -1,0 +1,124 @@
+---
+// TeamSection Component - Liderazgo N3XO
+import FlagChile from './flags/FlagChile.astro';
+import FlagGermany from './flags/FlagGermany.astro';
+
+const team = [
+  {
+    name: 'Carola Carrasco',
+    role: 'Fundadora & CTO',
+    location: 'Chile',
+    isChile: true,
+    email: 'carola.carrasco@n3xo.cl',
+    desc: 'Más de 20 años de experiencia y liderazgo en la industria de medios, supervisando infraestructuras técnicas, permisología y la integración tecnológica entre soportes físicos y plataformas digitales.',
+    tag: 'TECNOLOGÍA & ESTRATEGIA',
+  },
+  {
+    name: 'Pame Ortega',
+    role: 'Fundadora & Account Manager',
+    location: 'Chile',
+    isChile: true,
+    email: 'pame.ortega@n3xo.cl',
+    desc: 'Más de 20 años de trayectoria comercial gestionando cuentas de marcas líderes, planificación estratégica de medios masivos y coordinación de circuitos OOH en todo el país.',
+    tag: 'COMERCIAL & CLIENTES',
+  },
+  {
+    name: 'José',
+    role: 'Tech Leader',
+    location: 'Alemania',
+    isChile: false,
+    email: null,
+    whatsapp: '491709020413',
+    desc: 'Dirige el desarrollo de software, arquitectura de plataformas web, automatización e investigación de nuevas herramientas y tecnologías de vanguardia europea.',
+    tag: 'SOFTWARE & I+D ALEMANIA',
+  },
+];
+---
+
+<section id="equipo" class="relative py-24 sm:py-32 bg-obsidian border-t border-white/5 overflow-hidden">
+  
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
+      <div class="reveal-item inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono uppercase tracking-wider text-brand-silver mb-4">
+        <span>+20 AÑOS DE EXPERIENCIA & LIDERAZGO</span>
+      </div>
+      <h2 class="reveal-item font-display font-bold text-3xl sm:text-5xl text-white tracking-tight mb-6">
+        El equipo detrás de <span class="text-gradient">N3XO</span>
+      </h2>
+      <p class="reveal-item text-brand-silver text-base sm:text-lg leading-relaxed">
+        Más de dos décadas de experiencia real y relaciones consolidadas en el mercado publicitario chileno, complementadas con el rigor y desarrollo tecnológico desde Alemania.
+      </p>
+    </div>
+
+    <!-- Team Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {team.map((member) => (
+        <div class="reveal-item glass-panel rounded-3xl p-8 flex flex-col justify-between group hover:border-brand-neon/40 transition-all duration-300 hover:-translate-y-1 relative">
+          
+          <div>
+            <!-- Location Badge -->
+            <div class="flex items-center justify-between mb-8">
+              <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-brand-neon inline-flex items-center gap-1.5">
+                <span>{member.location}</span>
+                {member.isChile ? (
+                  <FlagChile class="w-4 h-3 rounded-[2px] shadow-sm inline-block" />
+                ) : (
+                  <FlagGermany class="w-4 h-3 rounded-[2px] shadow-sm inline-block" />
+                )}
+              </span>
+              <span class="text-[10px] font-mono uppercase text-brand-silver tracking-wider">
+                {member.tag}
+              </span>
+            </div>
+
+            <!-- Avatar Silhouette / Initial Graphic -->
+            <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-brand-violet/30 to-brand-neon/20 border border-brand-neon/30 flex items-center justify-center text-white text-2xl font-display font-bold mb-6 group-hover:scale-105 transition-transform duration-300">
+              {member.name.charAt(0)}
+            </div>
+
+            <!-- Name and Role -->
+            <h3 class="font-display font-bold text-2xl text-white mb-1 group-hover:text-brand-neon transition-colors">
+              {member.name}
+            </h3>
+            <p class="text-xs font-mono text-brand-lavender uppercase tracking-wider font-semibold mb-4">
+              {member.role}
+            </p>
+
+            <p class="text-xs sm:text-sm text-brand-silver leading-relaxed mb-6">
+              {member.desc}
+            </p>
+          </div>
+
+          <!-- Direct Contact Button -->
+          <div class="pt-6 border-t border-white/10 mt-auto">
+            {member.email ? (
+              <a
+                href={`mailto:${member.email}`}
+                class="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-xs font-medium text-white transition-all group-hover:border-brand-neon/30"
+              >
+                <svg class="w-4 h-4 text-brand-neon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                <span class="truncate">{member.email}</span>
+              </a>
+            ) : (
+              <a
+                href={`https://wa.me/${member.whatsapp}?text=Hallo%20Jose,%20ich%20interessiere%20mich%20f%C3%BCr%20N3XO%20Technologie.`}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-xs font-medium text-white transition-all group-hover:border-brand-neon/30"
+              >
+                <span>🇩🇪 WhatsApp Tech Lead</span>
+                <span class="text-brand-neon">→</span>
+              </a>
+            )}
+          </div>
+
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

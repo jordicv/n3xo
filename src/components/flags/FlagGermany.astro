@@ -1,0 +1,11 @@
+---
+interface Props {
+  class?: string;
+}
+const { class: className = "w-6 h-4 sm:w-8 sm:h-5 inline-block align-middle rounded-[3px] shadow-sm ring-1 ring-white/10" } = Astro.props;
+---
+<svg class={className} viewBox="0 0 5 3" xmlns="http://www.w3.org/2000/svg" aria-label="Bandera de Alemania">
+  <rect width="5" height="1" y="0" fill="#000000" />
+  <rect width="5" height="1" y="1" fill="#DD0000" />
+  <rect width="5" height="1" y="2" fill="#FFCE00" />
+</svg>

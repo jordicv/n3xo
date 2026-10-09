@@ -1,0 +1,88 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "N3XO.CL — OOH + DIGITAL | Publicidad Exterior y Tecnología",
+  description = "Conectamos marcas con el mundo físico y digital. Estrategia y operación de publicidad exterior (OOH/DOOH) en Chile × Ingeniería de software e innovación desde Alemania.",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <link rel="icon" type="image/png" href="/logos/n3xo-logo-purple.png" />
+    <meta name="generator" content={Astro.generator} />
+    
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <meta name="keywords" content="publicidad exterior chile, pantallas led chile, vallas publicitarias concepcion, soportes ooh chile, dooh, desarrollo web, software chile alemania, n3xo" />
+    <meta name="author" content="N3XO" />
+
+    <!-- Open Graph / Facebook / LinkedIn -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://n3xo.cl/" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="/videos/banner_poster.jpg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content="/videos/banner_poster.jpg" />
+
+    <!-- Google Fonts: Space Grotesk & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-obsidian text-white font-sans antialiased selection:bg-brand-neon/30 selection:text-white">
+    <slot />
+
+    <!-- Intersection Observer Script for Apple-style Staggered Scroll Reveal -->
+    <script is:inline>
+      const setupObserver = () => {
+        const items = document.querySelectorAll('.reveal-item');
+        if (!('IntersectionObserver' in window)) {
+          items.forEach((item) => item.classList.add('is-revealed'));
+          return;
+        }
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('is-revealed');
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            rootMargin: '0px 0px -60px 0px',
+            threshold: 0.12,
+          }
+        );
+
+        items.forEach((item) => observer.observe(item));
+      };
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', setupObserver);
+      } else {
+        setupObserver();
+      }
+    </script>
+  </body>
+</html>

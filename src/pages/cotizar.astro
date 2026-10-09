@@ -1,0 +1,43 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import ContactSection from '../components/ContactSection.astro';
+import WhatsAppDual from '../components/WhatsAppDual.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="Cotiza tu Campaña o Proyecto — N3XO.CL"
+  description="Solicita una propuesta comercial para publicidad exterior (OOH/DOOH), desarrollo de software o campañas integradas 360°. Atención directa en Chile y Alemania."
+>
+  <Navbar />
+
+  <main class="pt-20">
+    
+    <!-- Hero Header Cotiza -->
+    <section class="py-16 sm:py-24 bg-obsidian border-b border-white/5 text-center relative overflow-hidden">
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(114,0,255,0.2)_0%,transparent_70%)] pointer-events-none"></div>
+
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="reveal-item inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-violet/20 border border-brand-violet/40 text-xs font-mono uppercase tracking-wider text-brand-neon mb-6">
+          <span>RESPUESTA EN MENOS DE 24 HORAS</span>
+        </div>
+
+        <h1 class="reveal-item font-display font-bold text-4xl sm:text-6xl text-white tracking-tight mb-4">
+          Cotiza tu <span class="text-gradient">Proyecto</span>
+        </h1>
+
+        <p class="reveal-item text-base sm:text-xl text-brand-silver max-w-2xl mx-auto leading-relaxed">
+          Cuéntanos tus requerimientos de vía pública, desarrollo de software o campaña integrada y te prepararemos una propuesta técnica y comercial a la medida.
+        </p>
+      </div>
+    </section>
+
+    <!-- Main Quotation Engine Component -->
+    <ContactSection />
+
+  </main>
+
+  <WhatsAppDual />
+  <Footer />
+</Layout>

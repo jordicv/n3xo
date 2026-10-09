@@ -1,0 +1,80 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import ServicesDigital from '../../components/ServicesDigital.astro';
+import WhatsAppDual from '../../components/WhatsAppDual.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout
+  title="Digital & Software — Desarrollo Web e Ingeniería desde Alemania | N3XO.CL"
+  description="Desarrollo de páginas web, software a medida, e-commerce, marketing digital, analítica y automatización con IA. Ingeniería de software con estándares alemanes."
+>
+  <Navbar />
+
+  <main class="pt-20">
+    
+    <!-- Hero Header -->
+    <section class="py-20 sm:py-28 bg-obsidian border-b border-white/5 text-center relative overflow-hidden">
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(196,91,255,0.15)_0%,transparent_70%)] pointer-events-none"></div>
+
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="reveal-item inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono uppercase tracking-wider text-brand-lavender mb-6">
+          <span>ÁREA COMERCIAL 02 · TECNOLOGÍA & SOFTWARE</span>
+        </div>
+
+        <h1 class="reveal-item font-display font-bold text-4xl sm:text-6xl text-white tracking-tight mb-6">
+          Desarrollo Digital & <br />
+          <span class="text-gradient">Software a Medida</span>
+        </h1>
+
+        <p class="reveal-item text-base sm:text-xl text-brand-silver max-w-2xl mx-auto leading-relaxed mb-8">
+          Arquitectura digital e ingeniería de software desarrollada desde Alemania. Creamos plataformas sólidas, sitios web ultrarrápidos y automatizaciones de procesos.
+        </p>
+
+        <div class="reveal-item flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a
+            href="/cotizar?tipo=digital"
+            class="px-8 py-3.5 rounded-full bg-gradient-to-r from-brand-violet to-brand-neon text-white text-xs font-semibold uppercase tracking-wider shadow-lg hover:scale-105 active:scale-95 transition-all"
+          >
+            Cotizar Proyecto Digital
+          </a>
+          <a
+            href="https://wa.me/491709020413?text=Hallo%20N3XO%20Germany,%20ich%20interessiere%20mich%20f%C3%BCr%20Software%20und%20Webentwicklung."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-8 py-3.5 rounded-full bg-white/5 border border-white/15 text-white text-xs font-semibold uppercase tracking-wider hover:bg-white/10 transition-all"
+          >
+            Consultar Tech Lead (Alemania)
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Grid -->
+    <ServicesDigital />
+
+    <!-- German Quality Standards Banner -->
+    <section class="py-20 bg-obsidian border-t border-white/5 text-center">
+      <div class="max-w-3xl mx-auto px-4">
+        <div class="text-3xl mb-4">🇩🇪</div>
+        <h2 class="font-display font-bold text-3xl text-white mb-4">
+          Estándares de Ingeniería de Clase Mundial
+        </h2>
+        <p class="text-brand-silver text-sm leading-relaxed mb-8">
+          Código limpio, rendimiento extremo (Core Web Vitals > 95), seguridad informática estricta y arquitectura preparada para escalar sin deuda técnica.
+        </p>
+        <a
+          href="/cotizar?tipo=digital"
+          class="inline-flex items-center justify-center px-8 py-4 rounded-full bg-gradient-to-r from-brand-violet to-brand-neon text-white text-xs font-semibold uppercase tracking-wider hover:scale-105 transition-all shadow-lg"
+        >
+          Iniciar Proyecto de Software o Web
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <WhatsAppDual />
+  <Footer />
+</Layout>

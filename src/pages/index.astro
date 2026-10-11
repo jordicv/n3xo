@@ -2,188 +2,72 @@
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
 import Hero from '../components/Hero.astro';
-import FlagChile from '../components/flags/FlagChile.astro';
-import FlagGermany from '../components/flags/FlagGermany.astro';
+import ClientsBanner from '../components/ClientsBanner.astro';
+import SubproductsOOH from '../components/SubproductsOOH.astro';
+import TechHubDigital from '../components/TechHubDigital.astro';
+import NexusStory from '../components/NexusStory.astro';
 import WhatsAppDual from '../components/WhatsAppDual.astro';
 import Footer from '../components/Footer.astro';
-
-const pillars = [
-  {
-    tag: '01 · IMPACTO EN LA CALLE',
-    title: 'OOH · Publicidad Exterior',
-    desc: 'Planificación, comercialización y montaje de soportes urbanos, vallas camineras, pantallas LED de alta resolución y publicidad móvil en las principales arterias de Chile.',
-    href: '/servicios/ooh',
-    icon: '🏙️',
-    bulletPoints: ['Paletas y vallas urbanas', 'Monopostes carreteros', 'Pantallas LED / DOOH', 'OOH Móvil (Flotas)'],
-    badge: 'COBERTURA NACIONAL',
-  },
-  {
-    tag: '02 · INGENIERÍA & CÓDIGO',
-    title: 'Digital & Software',
-    desc: 'Desarrollo web corporativo ultrarrápido, tiendas e-commerce, software a medida, automatización e inteligencia artificial construida con estándares de ingeniería alemana.',
-    href: '/servicios/digital',
-    icon: '💻',
-    bulletPoints: ['Webs de alta velocidad', 'Software y plataformas web', 'Marketing & Ads de rendimiento', 'Automatización con IA'],
-    badge: 'HUB ALEMANIA',
-  },
-  {
-    tag: '03 · LÍNEA INSIGNIA',
-    title: 'Phygital (OOH + Digital)',
-    desc: 'El diferenciador N3XO: campañas integradas que conectan la calle con los datos. Soportes con QR trazable, landing pages instantáneas y analítica de conversiones.',
-    href: '/servicios/integracion',
-    icon: '⚡',
-    bulletPoints: ['Embudo sincronizado 360°', 'QR dinámico con atribución', 'Pantallas LED en tiempo real', 'Reportes de impacto real'],
-    badge: '360° CONECTADO',
-    featured: true,
-  },
-];
 ---
 
 <Layout
-  title="N3XO.CL — OOH + DIGITAL | Publicidad Exterior y Soluciones Digitales"
-  description="Conectamos marcas con el mundo físico y digital. Estrategia y operación de publicidad exterior en Chile × Ingeniería de software e innovación desde Alemania."
+  title="N3XO.CL — Publicidad en Vía Pública & Soluciones Digitales | Estrategias que Conectan"
+  description="Publicidad de alto impacto en vía pública en Chile × Desarrollo de software, plataformas web y automatizaciones desde Alemania. Estrategias que conectan."
 >
   <Navbar />
   
   <main>
-    <!-- 1. Hero Cinematográfico con Video Background -->
+    <!-- 1. Hero Cinematográfico con Selector de Entrada (Vía Pública vs. Digital) -->
     <Hero />
 
-    <!-- 2. Los 3 Grandes Ejes N3XO (Pillars Grid) -->
-    <section id="ejes" class="py-24 sm:py-32 bg-obsidian border-t border-white/5 relative overflow-hidden">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
-        <div class="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
-          <div class="reveal-item inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono uppercase tracking-wider text-brand-neon mb-4">
-            <span>MODELO DE NEGOCIO INTEGRADO</span>
-          </div>
-          <h2 class="reveal-item font-display font-bold text-3xl sm:text-5xl text-white tracking-tight mb-6">
-            Nuestros Tres Grandes <span class="text-gradient">Ejes Comerciales</span>
-          </h2>
-          <p class="reveal-item text-brand-silver text-base sm:text-lg leading-relaxed">
-            Puedes contratar un soporte publicitario para tu marca, desarrollar una plataforma tecnológica de nivel internacional o desplegar una campaña integrada que una ambos mundos.
-          </p>
-        </div>
+    <!-- 2. Franja de Confianza y Marcas (+20 Años de Experiencia) -->
+    <ClientsBanner />
 
-        <!-- 3 Cards -->
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {pillars.map((item) => (
-            <div
-              class={`reveal-item glass-panel rounded-3xl p-8 flex flex-col justify-between group transition-all duration-300 hover:-translate-y-1 relative ${item.featured ? 'border-brand-neon/40 shadow-[0_0_40px_rgba(114,0,255,0.2)]' : 'hover:border-white/20'}`}
-            >
-              <div>
-                <div class="flex items-center justify-between mb-6">
-                  <span class="text-3xl">{item.icon}</span>
-                  <span class={`px-2.5 py-1 rounded-full text-[10px] font-mono uppercase tracking-wider font-semibold ${item.featured ? 'bg-brand-neon/20 text-brand-neon border border-brand-neon/40' : 'bg-white/5 text-brand-silver border border-white/10'}`}>
-                    {item.badge}
-                  </span>
-                </div>
+    <!-- 3. Marketing en Vía Pública Acotado en Servicios Concretos -->
+    <SubproductsOOH />
 
-                <div class="text-[10px] font-mono uppercase tracking-widest text-brand-silver mb-1">
-                  {item.tag}
-                </div>
-                <h3 class="font-display font-bold text-2xl text-white mb-3 group-hover:text-brand-neon transition-colors">
-                  {item.title}
-                </h3>
-                <p class="text-xs sm:text-sm text-brand-silver leading-relaxed mb-6">
-                  {item.desc}
-                </p>
+    <!-- 4. Soluciones Digitales & Tech Hub Alemania (El Área de José) -->
+    <TechHubDigital />
 
-                <ul class="space-y-2 text-xs text-white/90 mb-8">
-                  {item.bulletPoints.map((pt) => (
-                    <li class="flex items-center gap-2">
-                      <span class="text-brand-neon font-bold">•</span>
-                      <span>{pt}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+    <!-- 5. Storytelling Visual: Dos Divisiones Especializadas (Chile × Alemania) -->
+    <NexusStory />
 
-              <div class="pt-6 border-t border-white/10 mt-auto">
-                <a
-                  href={item.href}
-                  class={`w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-xs font-semibold uppercase tracking-wider transition-all duration-300 ${item.featured ? 'bg-gradient-to-r from-brand-violet to-brand-neon text-white shadow-md hover:scale-[1.02]' : 'bg-white/5 hover:bg-white/10 text-white border border-white/10 group-hover:border-brand-neon/40'}`}
-                >
-                  <span>Conocer más detalles</span>
-                  <span class="text-sm">→</span>
-                </a>
-              </div>
-            </div>
-          ))}
-        </div>
-
+    <!-- 6. Banner de Cierre hacia Cotizar -->
+    <section class="py-24 bg-obsidian text-center border-t border-white/5 relative overflow-hidden">
+      <!-- Ambient Decorative Background Image -->
+      <div class="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
+        <img
+          src="/img/udec-altura.jpg"
+          alt=""
+          aria-hidden="true"
+          class="w-full h-full object-cover object-center opacity-15"
+          loading="lazy"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/90 to-obsidian/85"></div>
       </div>
-    </section>
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(114,0,255,0.15)_0%,transparent_70%)] pointer-events-none"></div>
 
-    <!-- 3. Teaser del Puente Estratégico (Chile x Alemania) -->
-    <section class="py-24 bg-obsidian-surface border-t border-white/5 relative overflow-hidden">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="glass-panel rounded-3xl p-8 sm:p-14 border border-brand-violet/30 bg-gradient-to-br from-brand-violet/10 via-transparent to-brand-neon/10">
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            
-            <div class="lg:col-span-8">
-              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[11px] font-mono text-brand-neon uppercase tracking-wider mb-4">
-                <span>+20 AÑOS DE EXPERIENCIA · CONEXIÓN INTERNACIONAL</span>
-              </div>
-              <h2 class="font-display font-bold text-3xl sm:text-4xl text-white mb-4">
-                Estrategia y operación en Chile. <br />
-                <span class="text-gradient">Tecnología e innovación desde Alemania.</span>
-              </h2>
-              <p class="text-sm sm:text-base text-brand-silver leading-relaxed max-w-2xl mb-6">
-                Fundada por Carola, Pame y José, N3XO une más de 20 años de trayectoria comprobada en medios masivos y publicidad exterior en Chile con el rigor técnico y desarrollo de software de vanguardia desde Alemania.
-              </p>
-              <div class="flex flex-wrap gap-6 text-xs text-brand-silver font-mono items-center">
-                <div class="flex items-center gap-1.5">
-                  <FlagChile class="w-4 h-3 rounded-[2px] shadow-sm inline-block" />
-                  <span>Operación, Medios & Clientes</span>
-                </div>
-                <div class="flex items-center gap-1.5">
-                  <FlagGermany class="w-4 h-3 rounded-[2px] shadow-sm inline-block" />
-                  <span>Software, Plataformas & I+D</span>
-                </div>
-                <div class="flex items-center gap-1.5">
-                  <span>📡</span>
-                  <span>Campañas Integradas 360°</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="lg:col-span-4 flex flex-col justify-center items-start lg:items-end gap-4">
-              <a
-                href="/nosotros"
-                class="px-6 py-3.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white text-xs font-semibold uppercase tracking-wider transition-all duration-300 flex items-center gap-2"
-              >
-                <span>Conoce a Nuestro Equipo</span>
-                <span>→</span>
-              </a>
-              <a
-                href="/cotizar"
-                class="px-6 py-3.5 rounded-full bg-gradient-to-r from-brand-violet to-brand-neon text-white text-xs font-semibold uppercase tracking-wider shadow-lg hover:scale-105 active:scale-95 transition-all"
-              >
-                Cotiza tu Proyecto
-              </a>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 4. Banner de Cierre hacia Cotizar -->
-    <section class="py-20 bg-obsidian text-center border-t border-white/5">
-      <div class="max-w-4xl mx-auto px-4">
-        <h2 class="font-display font-bold text-3xl sm:text-4xl text-white mb-4">
+      <div class="max-w-4xl mx-auto px-4 relative z-10">
+        <h2 class="font-display font-bold text-3xl sm:text-5xl text-white mb-4">
           “La tecnología conecta. La estrategia transforma.”
         </h2>
-        <p class="text-brand-silver text-sm sm:text-base max-w-xl mx-auto mb-8">
-          Comencemos a planificar tu próxima campaña o tu nuevo software corporativo hoy mismo.
+        <p class="text-brand-silver text-sm sm:text-base max-w-xl mx-auto mb-8 leading-relaxed">
+          Comencemos a planificar tu próximo circuito publicitario en las principales ciudades o tu nueva plataforma de software corporativa hoy mismo.
         </p>
-        <a
-          href="/cotizar"
-          class="inline-flex items-center justify-center px-8 py-4 rounded-full bg-gradient-to-r from-brand-violet to-brand-neon text-white text-xs font-semibold uppercase tracking-wider hover:scale-105 transition-all shadow-lg"
-        >
-          Iniciar Cotización
-        </a>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a
+            href="/cotizar"
+            class="inline-flex items-center justify-center px-8 py-4 rounded-full bg-gradient-to-r from-brand-violet to-brand-neon text-white text-xs font-semibold uppercase tracking-wider hover:scale-105 transition-all shadow-lg"
+          >
+            Iniciar Cotización Personalizada
+          </a>
+          <a
+            href="/nosotros"
+            class="inline-flex items-center justify-center px-8 py-4 rounded-full bg-white/5 hover:bg-white/10 border border-white/15 text-white text-xs font-semibold uppercase tracking-wider transition-all"
+          >
+            Conocer a Nuestro Equipo →
+          </a>
+        </div>
       </div>
     </section>
 

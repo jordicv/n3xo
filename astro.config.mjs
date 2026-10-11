@@ -9,4 +9,7 @@ export default defineConfig({
   },
   integrations: [tailwind()],
   site: 'https://n3xo.cl',
+  redirects: {
+    '/servicios/integracion': '/servicios',
+  },
 });

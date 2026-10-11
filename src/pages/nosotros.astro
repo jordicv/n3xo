@@ -16,21 +16,35 @@ import Footer from '../components/Footer.astro';
   
   <main class="pt-20">
     
-    <!-- Header Page Hero -->
-    <section class="relative py-20 sm:py-28 bg-obsidian border-b border-white/5 overflow-hidden text-center">
-      <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(114,0,255,0.15)_0%,transparent_70%)] pointer-events-none"></div>
+    <!-- Header Page Hero with Ambient Decorative Background Image -->
+    <section class="relative py-24 sm:py-32 bg-obsidian border-b border-white/5 overflow-hidden text-center">
+      
+      <!-- Decorative Background Image with Vivid Contrast -->
+      <div class="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
+        <img
+          src="/img/concepcion-altura.jpg"
+          alt=""
+          aria-hidden="true"
+          class="w-full h-full object-cover object-center opacity-45 filter contrast-125 saturate-115 brightness-90"
+          loading="eager"
+        />
+        <!-- Protective gradients for maximum legibility and cinematic atmosphere -->
+        <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/80 to-obsidian/45"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(114,0,255,0.25)_0%,transparent_70%)]"></div>
+        <div class="absolute inset-0 bg-black/20"></div>
+      </div>
 
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="reveal-item inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono uppercase tracking-wider text-brand-neon mb-6">
+        <div class="reveal-item inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-xs font-mono uppercase tracking-wider text-brand-neon mb-6 shadow-md">
           <span>FILOSOFÍA & PROPÓSITO N3XO</span>
         </div>
         
-        <h1 class="reveal-item font-display font-bold text-4xl sm:text-6xl text-white tracking-tight mb-6">
+        <h1 class="reveal-item font-display font-bold text-4xl sm:text-6xl text-white tracking-tight mb-6 drop-shadow-[0_4px_24px_rgba(0,0,0,0.95)]">
           Conectar estrategia, creatividad y tecnología para <span class="text-gradient">generar progreso</span>.
         </h1>
 
-        <p class="reveal-item text-base sm:text-xl text-brand-silver leading-relaxed max-w-2xl mx-auto">
-          No somos únicamente una agencia de publicidad exterior ni solo una empresa de software: integramos medios físicos, plataformas digitales y capacidades tecnológicas bajo una misma propuesta de valor.
+        <p class="reveal-item text-base sm:text-xl text-gray-200 leading-relaxed max-w-2xl mx-auto font-normal drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
+          No somos únicamente una agencia de marketing en vía pública ni solo una empresa de software: contamos con dos divisiones especializadas que abordan la presencia en vía pública y el desarrollo tecnológico con un alto estándar de excelencia.
         </p>
       </div>
     </section>
@@ -41,7 +55,9 @@ import Footer from '../components/Footer.astro';
         <div class="glass-panel rounded-3xl p-8 sm:p-12 border border-brand-neon/30 bg-gradient-to-r from-brand-violet/15 via-obsidian-card to-brand-neon/15">
           <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
             <div class="md:col-span-4 text-center md:text-left">
-              <div class="text-5xl sm:text-7xl font-display font-bold text-gradient mb-2">+20 Años</div>
+              <div class="text-5xl sm:text-7xl font-display font-bold text-gradient mb-2 tabular-nums">
+                +<span id="nosotros-exp-counter" class="inline-block tabular-nums">0</span> Años
+              </div>
               <div class="text-xs font-mono uppercase tracking-widest text-brand-silver">De Experiencia en Medios</div>
             </div>
             <div class="md:col-span-8 text-sm sm:text-base text-brand-silver leading-relaxed border-t md:border-t-0 md:border-l border-white/10 pt-6 md:pt-0 md:pl-8">
@@ -73,7 +89,7 @@ import Footer from '../components/Footer.astro';
           ¿Listo para trabajar juntos?
         </h2>
         <p class="text-brand-silver text-sm sm:text-base max-w-xl mx-auto mb-8">
-          Conversemos sobre tu próximo soporte de vía pública, tu proyecto de software o una campaña 360° integrada.
+          Conversemos sobre tu próximo soporte de vía pública o tu nuevo desarrollo de software y sistemas.
         </p>
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
@@ -97,3 +113,67 @@ import Footer from '../components/Footer.astro';
   <WhatsAppDual />
   <Footer />
 </Layout>
+
+<script>
+  function initNosotrosCounter() {
+    const counterEl = document.getElementById('nosotros-exp-counter');
+    if (!counterEl) return;
+
+    // Respect reduced motion preference
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      counterEl.textContent = '20';
+      return;
+    }
+
+    let hasAnimated = false;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasAnimated) {
+            hasAnimated = true;
+            observer.disconnect();
+            animateCounter();
+          }
+        });
+      },
+      { threshold: 0.25 }
+    );
+
+    observer.observe(counterEl);
+
+    function animateCounter() {
+      const target = 20;
+      const duration = 1600; // ms
+      const startTime = performance.now();
+
+      function update(currentTime: number) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        
+        // Cubic ease-out
+        const easeOut = 1 - Math.pow(1 - progress, 3);
+        const currentVal = Math.round(easeOut * target);
+
+        if (counterEl) {
+          counterEl.textContent = currentVal.toString();
+        }
+
+        if (progress < 1) {
+          requestAnimationFrame(update);
+        } else if (counterEl) {
+          counterEl.textContent = target.toString();
+        }
+      }
+
+      requestAnimationFrame(update);
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initNosotrosCounter);
+  } else {
+    initNosotrosCounter();
+  }
+  document.addEventListener('astro:page-load', initNosotrosCounter);
+</script>

@@ -8,29 +8,42 @@ import Footer from '../../components/Footer.astro';
 ---
 
 <Layout
-  title="Publicidad Exterior (OOH & DOOH) en Chile | N3XO.CL"
+  title="Marketing en Vía Pública (OOH & DOOH) en Chile | N3XO.CL"
   description="Soportes fijos, vallas carreteras, pantallas LED urbanas, intervenciones BTL y branding vehicular en Chile. Planificación, comercialización y montaje de campañas OOH."
 >
   <Navbar />
 
   <main class="pt-20">
     
-    <!-- Hero Header -->
-    <section class="py-20 sm:py-28 bg-obsidian border-b border-white/5 text-center relative overflow-hidden">
-      <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(114,0,255,0.18)_0%,transparent_70%)] pointer-events-none"></div>
+    <!-- Hero Header with Decorative Background Image -->
+    <section class="py-24 sm:py-32 bg-obsidian border-b border-white/5 text-center relative overflow-hidden">
+      <!-- Decorative Background Image with Vivid Contrast -->
+      <div class="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
+        <img
+          src="/img/servicios-ooh-drone.jpg"
+          alt=""
+          aria-hidden="true"
+          class="w-full h-full object-cover object-center opacity-45 filter contrast-125 saturate-120 brightness-90"
+          loading="eager"
+        />
+        <!-- Protective gradients for maximum legibility and cinematic atmosphere -->
+        <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/80 to-obsidian/45"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(114,0,255,0.25)_0%,transparent_70%)]"></div>
+        <div class="absolute inset-0 bg-black/20"></div>
+      </div>
 
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="reveal-item inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono uppercase tracking-wider text-brand-neon mb-6">
-          <span>+20 AÑOS DE EXPERIENCIA · VÍA PÚBLICA & MEDIOS</span>
+        <div class="reveal-item inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-xs font-mono uppercase tracking-wider text-brand-neon mb-6 shadow-md">
+          <span>OPERACIÓN NACIONAL · VÍA PÚBLICA & MEDIOS</span>
         </div>
 
-        <h1 class="reveal-item font-display font-bold text-4xl sm:text-6xl text-white tracking-tight mb-6">
-          Publicidad Exterior <br />
+        <h1 class="reveal-item font-display font-bold text-4xl sm:text-6xl text-white tracking-tight mb-6 drop-shadow-[0_4px_24px_rgba(0,0,0,0.95)]">
+          Marketing en Vía Pública <br />
           <span class="text-gradient">OOH & DOOH</span> en Chile
         </h1>
 
-        <p class="reveal-item text-base sm:text-xl text-brand-silver max-w-2xl mx-auto leading-relaxed mb-8">
-          Más de dos décadas de trayectoria respaldan nuestra operación: planificamos, comercializamos e implementamos circuitos publicitarios en las avenidas, autopistas y puntos de mayor flujo de Chile.
+        <p class="reveal-item text-base sm:text-xl text-gray-200 max-w-2xl mx-auto leading-relaxed mb-8 font-normal drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
+          Planificamos, comercializamos e implementamos circuitos publicitarios en las avenidas, autopistas y puntos de mayor flujo de Chile con gestión directa, permisología y montaje técnico integral.
         </p>
 
         <div class="reveal-item flex flex-col sm:flex-row items-center justify-center gap-4">

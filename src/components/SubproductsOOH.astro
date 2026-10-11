@@ -1,0 +1,169 @@
+---
+// SubproductsOOH Component - Servicios de Marketing en Vía Pública (Acotados y Cotizables)
+const subproducts = [
+  {
+    id: 'fijos',
+    number: '01',
+    title: 'Soportes Fijos & Carreteras',
+    subtitle: 'Paletas urbanas, vallas camineras y monopostes de gran formato.',
+    desc: 'Presencia constante y recordación continua las 24 horas del día. Ubicaciones privilegiadas en las principales arterias comerciales de Santiago, Concepción y rutas interurbanas de Chile.',
+    tags: ['Paletas doble cara', 'Vallas camineras', 'Monopostes 24/7', 'Letreros comerciales'],
+    idealFor: 'Lanzamientos masivos, posicionamiento de marca y presencia permanente.',
+    badge: 'ALTA RECORDACIÓN',
+    link: '/servicios/ooh#urbanos',
+    bgImage: '/img/ooh-atardecer.png',
+  },
+  {
+    id: 'pantallas',
+    number: '02',
+    title: 'Pantallas LED / DOOH',
+    subtitle: 'Digital Out-of-Home dinámico en puntos neurálgicos.',
+    desc: 'Soportes digitales de ultra alta definición con reproducción de video y animación. Flexibilidad total de pauta: rotación de spots por franjas horarias y actualización de contenidos en tiempo real.',
+    tags: ['Resolución 4K/HD', 'Video dinámico', 'Franjas horarias', 'Circuitos sincronizados'],
+    idealFor: 'Campañas ágiles, ofertas temporales, retail y marcas de consumo masivo.',
+    badge: 'DINÁMICO & FLEXIBLE',
+    link: '/servicios/ooh#dooh',
+    bgImage: '/img/ciudad-avanza.png',
+  },
+  {
+    id: 'movil',
+    number: '03',
+    title: 'Publicidad Móvil & Lunetas',
+    subtitle: 'Microbuses urbanos, transporte público y flotas corporativas.',
+    desc: 'Lleva tu mensaje directo a comunas, barrios y avenidas donde no existen soportes fijos tradicionales. Branding de flotas completas o lunetas traseras de altísimo impacto vehicular y peatonal.',
+    tags: ['Lunetas traseras', 'Branding de flotas', 'Transporte urbano', 'Cobertura intercomunal'],
+    idealFor: 'Gran frecuencia de impacto, cobertura geográfica amplia y presupuestos eficientes.',
+    badge: 'COBERTURA EN MOVIMIENTO',
+    link: '/servicios/ooh#movil',
+    bgImage: '/img/concepcion-altura.jpg',
+  },
+  {
+    id: 'especiales',
+    number: '04',
+    title: 'Building Wraps & Especiales',
+    subtitle: 'Intervenciones en edificios, volumetría 3D y formatos BTL.',
+    desc: 'Lo que el cliente imagina, lo implementamos: revestimientos gigantes en fachadas de edificios (building wraps), estructuras arquitectónicas ad-hoc, volumetría 3D y ambient marketing de alto impacto.',
+    tags: ['Building Wraps', 'Intervenciones urbanas', 'Volumetría 3D', 'Activaciones a medida'],
+    idealFor: 'Generar viralidad, notas de prensa (PR), eventos y presencia monumental imborrable.',
+    badge: 'PROYECTOS A MEDIDA',
+    link: '/servicios/ooh#especiales',
+    bgImage: '/img/udec-altura.jpg',
+  },
+];
+---
+
+<section id="via-publica" class="relative py-24 sm:py-32 bg-obsidian border-t border-white/5 overflow-hidden">
+  
+  <!-- Subtle Glow Background -->
+  <div class="absolute top-1/4 right-0 w-96 h-96 bg-brand-violet/10 rounded-full blur-[140px] pointer-events-none"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    
+    <!-- Header -->
+    <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-16 gap-8">
+      <div class="max-w-3xl">
+        <div class="reveal-item inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono uppercase tracking-wider text-brand-neon mb-4">
+          <span>ÁREA COMERCIAL 01 · VÍA PÚBLICA (CHILE)</span>
+        </div>
+        <h2 class="reveal-item font-display font-bold text-3xl sm:text-5xl text-white tracking-tight">
+          Marketing en Vía Pública Acotado en <br class="hidden sm:inline" />
+          <span class="text-gradient">Servicios Claros</span>
+        </h2>
+        <p class="reveal-item text-brand-silver text-base sm:text-lg mt-4 leading-relaxed">
+          Sin enredos ni información sobrecargada. Estructuramos nuestro catálogo en los servicios de mayor impacto y cotización en el mercado publicitario chileno.
+        </p>
+      </div>
+
+      <div class="reveal-item flex flex-col sm:flex-row items-start sm:items-center gap-4">
+        <a
+          href="/cotizar?tipo=ooh"
+          class="px-6 py-3.5 rounded-full bg-gradient-to-r from-brand-violet to-brand-neon text-white text-xs font-semibold uppercase tracking-wider shadow-lg hover:scale-105 transition-all"
+        >
+          Cotizar Soporte OOH
+        </a>
+        <a
+          href="/servicios/ooh"
+          class="px-6 py-3.5 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-white text-xs font-semibold uppercase tracking-wider transition-all"
+        >
+          Ver Todos los Circuitos →
+        </a>
+      </div>
+    </div>
+
+    <!-- 4 Subproducts Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {subproducts.map((sub) => (
+        <div class="reveal-item rounded-3xl p-8 flex flex-col justify-between group border border-white/15 hover:border-brand-neon/60 transition-all duration-300 hover:-translate-y-1 relative overflow-hidden bg-obsidian/45 backdrop-blur-md shadow-2xl">
+          
+          <!-- Ambient Decorative Background Image with Vivid Contrast -->
+          <div class="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
+            <img
+              src={sub.bgImage}
+              alt=""
+              aria-hidden="true"
+              class="w-full h-full object-cover object-center opacity-55 group-hover:opacity-75 group-hover:scale-105 transition-all duration-700 ease-out filter contrast-125 saturate-120 brightness-90"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/80 to-obsidian/25"></div>
+            <div class="absolute inset-0 bg-black/20"></div>
+          </div>
+
+          <div class="relative z-10">
+            <!-- Top badge and number -->
+            <div class="flex items-center justify-between mb-6">
+              <span class="text-xs font-mono font-bold text-brand-neon px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-brand-neon/40 shadow-sm">
+                {sub.badge}
+              </span>
+              <span class="text-2xl font-display font-bold text-white/40 group-hover:text-brand-neon transition-colors drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                {sub.number}
+              </span>
+            </div>
+
+            <!-- Title & Subtitle -->
+            <h3 class="font-display font-bold text-2xl text-white mb-2 group-hover:text-brand-neon transition-colors drop-shadow-[0_2px_8px_rgba(0,0,0,0.95)]">
+              {sub.title}
+            </h3>
+            <p class="text-xs font-mono text-brand-neon/90 mb-4 drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]">{sub.subtitle}</p>
+            
+            <p class="text-sm text-gray-200 leading-relaxed mb-6 font-normal drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]">
+              {sub.desc}
+            </p>
+
+            <!-- Tags -->
+            <div class="flex flex-wrap gap-2 mb-6">
+              {sub.tags.map((tag) => (
+                <span class="px-2.5 py-1 rounded-lg bg-black/65 backdrop-blur-md text-[11px] font-mono text-white/90 border border-white/15 shadow-sm">
+                  {tag}
+                </span>
+              ))}
+            </div>
+
+            <!-- Ideal for callout -->
+            <div class="p-3.5 rounded-xl bg-black/60 backdrop-blur-md border border-white/10 text-xs text-gray-300 mb-8 shadow-sm">
+              <span class="text-brand-neon font-semibold">Recomendado para:</span> {sub.idealFor}
+            </div>
+          </div>
+
+          <!-- Bottom Action Buttons -->
+          <div class="pt-6 border-t border-white/15 mt-auto flex items-center justify-between gap-4 relative z-10">
+            <a
+              href={`/cotizar?tipo=ooh&sub=${sub.id}`}
+              class="text-xs font-semibold uppercase tracking-wider text-white hover:text-brand-neon transition-colors flex items-center gap-1.5 drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)]"
+            >
+              <span>Cotizar este formato</span>
+              <span>→</span>
+            </a>
+            <a
+              href={sub.link}
+              class="text-xs text-white/80 hover:text-white transition-colors drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)]"
+            >
+              Detalles técnicos
+            </a>
+          </div>
+
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

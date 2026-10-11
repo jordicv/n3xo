@@ -1,12 +1,12 @@
 # N3XO.CL — Plataforma Web Oficial
 
-**OOH · DIGITAL · INTEGRATION · CHILE 🇨🇱 × ALEMANIA 🇩🇪**
+**OOH · SOFTWARE & SISTEMAS · CHILE & ALEMANIA**
 
-Plataforma web de alto rendimiento construida con **Astro 5** y **Tailwind CSS**, diseñada bajo la identidad de marca oficial y estándares de animación e ingeniería móvil estilo Apple.
+Plataforma web de alto rendimiento construida con **Astro 5** y **Tailwind CSS**, diseñada bajo la identidad corporativa oficial y estándares de ingeniería moderna.
 
 ---
 
-## 🚀 Inicio Rápido
+## Inicio Rápido
 
 ### Requisitos
 - Node.js 18+ (recomendado Node 20 o superior).
@@ -34,7 +34,7 @@ npm run preview
 
 ---
 
-## 🎨 Identidad de Marca Aplicada
+## Identidad de Marca Aplicada
 
 - **Obsidian Black:** `#08080C` (Fondo y atmósferas oscuras premium).
 - **Electric Violet:** `#7200FF` (Color distintivo principal).
@@ -47,30 +47,35 @@ npm run preview
 
 ---
 
-## 📁 Estructura del Proyecto
+## Estructura del Proyecto
 
 ```
 N3XO/
 ├── public/
+│   ├── img/             # Fotografías reales de soportes y tecnología
 │   ├── logos/           # Logotipos oficiales en alta definición
 │   └── videos/          # Videos de fondo (1080p, 720p, poster)
 ├── src/
 │   ├── components/
 │   │   ├── Navbar.astro              # Navegación fija con cristal esmerilado y menú móvil
-│   │   ├── Hero.astro                # Video background 100dvh con tipografía fluida
-│   │   ├── ChileGermany.astro        # Puente estratégico Chile × Alemania
-│   │   ├── ServicesOOH.astro         # Catálogo de 5 áreas de vía pública y cotizador
-│   │   ├── ServicesDigital.astro     # Soluciones de software, plataformas y marketing
-│   │   ├── IntegrationSection.astro  # Línea Insignia Phygital (OOH + Digital 360°)
+│   │   ├── Hero.astro                # Video background 100dvh con dos divisiones claras
+│   │   ├── ServicesOOH.astro         # Catálogo de vía pública en Chile
+│   │   ├── ServicesDigital.astro     # Soluciones de software, plataformas y web desde Alemania
 │   │   ├── CoverageSection.astro     # Cobertura nacional (Concepción, Santiago, Rutas)
-│   │   ├── TeamSection.astro         # Carola Carrasco, Pame Ortega y José
+│   │   ├── TeamSection.astro         # Liderazgo técnico y comercial
 │   │   ├── ContactSection.astro      # Formulario interactivo de propuesta y sedes
-│   │   ├── WhatsAppDual.astro        # Botón flotante interactivo Chile 🇨🇱 / Alemania 🇩🇪
+│   │   ├── WhatsAppDual.astro        # Botón flotante interactivo Chile / Alemania
 │   │   └── Footer.astro              # Mapa del sitio, correos y créditos
 │   ├── layouts/
 │   │   └── Layout.astro              # Metatags SEO, fuentes y script de revelación
 │   ├── pages/
-│   │   └── index.astro               # Ensamblado de la experiencia completa
+│   │   ├── index.astro               # Portada principal
+│   │   ├── nosotros.astro            # Trayectoria, equipo y métricas (+20 años)
+│   │   ├── cotizar.astro             # Cotizador interactivo
+│   │   └── servicios/
+│   │       ├── index.astro           # Resumen de ambas divisiones
+│   │       ├── ooh.astro             # División Vía Pública (Chile)
+│   │       └── digital.astro         # División Software & Web (Alemania)
 │   └── styles/
 │       └── global.css                # Estilos base, scrollbar Apple y utilidades
 ├── astro.config.mjs
@@ -80,8 +85,8 @@ N3XO/
 
 ---
 
-## 📞 Canales Integrados
+## Canales Integrados
 
-- **Chile 🇨🇱 (Operación, Medios & OOH):** `+56 9 3234 6724`
-- **Alemania 🇩🇪 (Software, Plataformas & Digital):** `+49 170 9020413`
+- **Chile (Operación, Medios & OOH):** `+56 9 3234 6724`
+- **Alemania (Software, Plataformas & Digital):** `+49 170 9020413`
 - **Correos:** `carola.carrasco@n3xo.cl` · `pame.ortega@n3xo.cl`

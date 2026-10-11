@@ -6,62 +6,81 @@ import Footer from '../../components/Footer.astro';
 
 const servicesOverview = [
   {
-    title: 'OOH · Publicidad Exterior',
-    subtitle: 'Dominio visual en vía pública a escala nacional.',
-    badge: 'PRESENCIA FÍSICA',
+    title: 'Publicidad en Vía Pública (OOH)',
+    subtitle: 'Dominio visual en las ciudades y carreteras de Chile.',
+    badge: 'OPERACIÓN CHILE',
     link: '/servicios/ooh',
-    icon: '🏙️',
-    desc: 'Soportes urbanos, paletas publicitarias, vallas camineras en autopistas, pantallas LED de alta resolución, intervenciones BTL y flotas vehiculares.',
-    items: ['Soportes Urbanos', 'Vallas Camineras', 'Pantallas LED / DOOH', 'Proyectos Especiales', 'OOH Móvil (Flotas)'],
-    ctaText: 'Ver Soportes OOH →',
+    icon: 'ooh',
+    desc: 'Gestión comercial directa con las marcas más grandes del país, permisología al día y cobertura nacional. Soportes estratégicos, vallas camineras, pantallas LED urbanas, flotas móviles y proyectos especiales.',
+    items: ['Soportes Fijos Urbanos & Carreteras', 'Pantallas LED de Alta Resolución', 'Publicidad Móvil & Lunetas', 'Building Wraps & Formatos Especiales', 'Gestión de permisos y montaje en Chile'],
+    ctaText: 'Ver Catálogo Vía Pública →',
   },
   {
-    title: 'Digital & Software',
-    subtitle: 'Ingeniería y plataformas con precisión alemana.',
-    badge: 'INGENIERÍA & CÓDIGO',
+    title: 'Sistemas, Web & Software',
+    subtitle: 'Ingeniería de software y plataformas desde Alemania.',
+    badge: 'TECH HUB ALEMANIA',
     link: '/servicios/digital',
-    icon: '💻',
-    desc: 'Desarrollo web corporativo de alto rendimiento, software a medida, e-commerce, sistemas de gestión, automatización de procesos e inteligencia artificial.',
-    items: ['Desarrollo Web & E-commerce', 'Software a Medida', 'Marketing Digital', 'Publicidad en Meta & Google Ads', 'Automatización e IA'],
-    ctaText: 'Ver Soluciones Digitales →',
-  },
-  {
-    title: 'Integration · Phygital 360°',
-    subtitle: 'La línea insignia: conexión física + digital.',
-    badge: 'LÍNEA INSIGNIA',
-    link: '/servicios/integracion',
-    icon: '⚡',
-    desc: 'Campañas que conectan la calle con los datos: soportes con QR dinámico trazable, sincronización de pantallas LED, landing pages móviles y atribución medible.',
-    items: ['Campañas Integradas 360°', 'QR Dinámico con Trazabilidad', 'Pantallas Sincronizadas', 'Landing Pages Ultralivianas', 'Métricas Reales Observadas'],
-    ctaText: 'Ver Línea Phygital →',
-    featured: true,
+    icon: 'software',
+    desc: 'Desarrollo de páginas web corporativas ultrarrápidas, construcción de sistemas web y software a medida, automatización de procesos con Inteligencia Artificial y analítica avanzada.',
+    items: ['Páginas Web Corporativas 95+ Core Vitals', 'Sistemas y Plataformas a Medida', 'Automatización de Procesos con IA', 'Dashboards y Herramientas Operativas', 'Ingeniería con estándares alemanes'],
+    ctaText: 'Ver Soluciones de Software →',
   },
 ];
 ---
 
 <Layout
-  title="Servicios — OOH, Digital & Integración Phygital | N3XO.CL"
-  description="Conoce las tres áreas comerciales de N3XO: Publicidad Exterior (OOH), Desarrollo Digital & Software, y nuestra línea insignia de Campañas Integradas Phygital 360°."
+  title="Servicios — Vía Pública & Desarrollo de Software | N3XO.CL"
+  description="Conoce las dos divisiones especializadas de N3XO: Marketing en Vía Pública en Chile (OOH) y Desarrollo de Software, Sistemas y Automatización desde Alemania."
 >
   <Navbar />
 
   <main class="pt-20">
     
-    <!-- Hero Header -->
-    <section class="py-20 sm:py-28 bg-obsidian border-b border-white/5 text-center relative overflow-hidden">
-      <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(196,91,255,0.12)_0%,transparent_70%)] pointer-events-none"></div>
+    <!-- Hero Header with Decorative Background Images (OOH & Software) -->
+    <section class="py-24 sm:py-32 bg-obsidian border-b border-white/5 text-center relative overflow-hidden">
+      <!-- Decorative Dual Background Images with Vivid Contrast -->
+      <div class="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
+        <div class="grid grid-cols-1 md:grid-cols-2 w-full h-full">
+          <!-- Left: Marketing en Vía Pública (Drone Concepción / UdeC) -->
+          <div class="relative w-full h-full overflow-hidden">
+            <img
+              src="/img/servicios-ooh-drone.jpg"
+              alt=""
+              aria-hidden="true"
+              class="w-full h-full object-cover object-center opacity-50 filter contrast-125 saturate-120 brightness-90"
+              loading="eager"
+            />
+            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-obsidian/70 to-obsidian hidden md:block"></div>
+          </div>
+          <!-- Right: Sistemas & Software (Wireframe / Whiteboard Architecture) -->
+          <div class="relative w-full h-full overflow-hidden">
+            <img
+              src="/img/servicios-software-wireframe.jpg"
+              alt=""
+              aria-hidden="true"
+              class="w-full h-full object-cover object-center opacity-45 filter contrast-125 saturate-110 brightness-85"
+              loading="eager"
+            />
+            <div class="absolute inset-0 bg-gradient-to-l from-transparent via-obsidian/70 to-obsidian hidden md:block"></div>
+          </div>
+        </div>
+        <!-- Protective gradients for maximum legibility and cinematic atmosphere -->
+        <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/85 to-obsidian/45"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(196,91,255,0.25)_0%,transparent_70%)]"></div>
+        <div class="absolute inset-0 bg-black/30"></div>
+      </div>
 
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="reveal-item inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono uppercase tracking-wider text-brand-lavender mb-6">
+        <div class="reveal-item inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-xs font-mono uppercase tracking-wider text-brand-lavender mb-6 shadow-md">
           <span>PORTAFOLIO DE CAPACIDADES</span>
         </div>
 
-        <h1 class="reveal-item font-display font-bold text-4xl sm:text-6xl text-white tracking-tight mb-6">
+        <h1 class="reveal-item font-display font-bold text-4xl sm:text-6xl text-white tracking-tight mb-6 drop-shadow-[0_4px_24px_rgba(0,0,0,0.95)]">
           Nuestras Áreas de <span class="text-gradient">Servicio</span>
         </h1>
 
-        <p class="reveal-item text-base sm:text-xl text-brand-silver max-w-2xl mx-auto leading-relaxed">
-          Puedes contratar un soporte individual, un desarrollo tecnológico a medida o una campaña integrada de punta a punta.
+        <p class="reveal-item text-base sm:text-xl text-gray-200 max-w-2xl mx-auto leading-relaxed font-normal drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
+          Dos divisiones especializadas con un estándar de excelencia común. Elige la solución que tu empresa necesita con asesoría técnica directa.
         </p>
       </div>
     </section>
@@ -70,15 +89,25 @@ const servicesOverview = [
     <section class="py-20 bg-obsidian-surface">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {servicesOverview.map((srv) => (
             <div
-              class={`glass-panel rounded-3xl p-8 flex flex-col justify-between group transition-all duration-300 hover:-translate-y-1 relative ${srv.featured ? 'border-brand-neon/40 shadow-[0_0_40px_rgba(114,0,255,0.2)]' : 'hover:border-white/20'}`}
+              class="glass-panel rounded-3xl p-8 flex flex-col justify-between group transition-all duration-300 hover:-translate-y-1 relative hover:border-brand-neon/40 shadow-xl"
             >
               <div>
                 <div class="flex items-center justify-between mb-6">
-                  <span class="text-3xl">{srv.icon}</span>
-                  <span class={`px-3 py-1 rounded-full text-[10px] font-mono uppercase tracking-wider font-semibold ${srv.featured ? 'bg-brand-neon/20 text-brand-neon border border-brand-neon/40' : 'bg-white/5 text-brand-silver border border-white/10'}`}>
+                  <div class={`w-12 h-12 rounded-2xl bg-black/65 backdrop-blur-md border border-white/20 flex items-center justify-center shadow-lg ${srv.icon === 'ooh' ? 'text-brand-neon' : 'text-brand-lavender'}`}>
+                    {srv.icon === 'ooh' ? (
+                      <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                      </svg>
+                    ) : (
+                      <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                      </svg>
+                    )}
+                  </div>
+                  <span class="px-3 py-1 rounded-full text-[10px] font-mono uppercase tracking-wider font-semibold bg-white/5 text-brand-neon border border-brand-neon/30">
                     {srv.badge}
                   </span>
                 </div>
@@ -102,7 +131,7 @@ const servicesOverview = [
               <div class="pt-6 border-t border-white/10 mt-auto">
                 <a
                   href={srv.link}
-                  class={`w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-xs font-semibold uppercase tracking-wider transition-all duration-300 ${srv.featured ? 'bg-gradient-to-r from-brand-violet to-brand-neon text-white shadow-md hover:scale-[1.02]' : 'bg-white/5 hover:bg-white/10 text-white border border-white/10'}`}
+                  class="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-xs font-semibold uppercase tracking-wider transition-all duration-300 bg-gradient-to-r from-brand-violet to-brand-neon text-white shadow-md hover:scale-[1.02]"
                 >
                   <span>{srv.ctaText}</span>
                 </a>

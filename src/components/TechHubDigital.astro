@@ -1,0 +1,171 @@
+---
+// TechHubDigital Component - El Área Digital y Tech Lead de José (Alemania)
+import FlagGermany from './flags/FlagGermany.astro';
+
+const digitalPillars = [
+  {
+    number: '01',
+    title: 'Desarrollo Web & Landing Pages',
+    tag: 'ULTRA PERFORMANCE',
+    desc: 'Construimos páginas web corporativas, landing pages de conversión y tiendas online con tiempos de carga milimétricos y optimización SEO técnica de clase mundial.',
+    features: [
+      'Páginas web corporativas ultrarrápidas',
+      'Landing pages diseñadas para convertir pauta publicitaria',
+      'Tiendas E-commerce B2B y B2C escalables',
+      'Core Web Vitals con puntuación 95+ en Google',
+    ],
+    bgImage: '/img/tech-mkt-1.jpg',
+  },
+  {
+    number: '02',
+    title: 'Software & Plataformas a Medida',
+    tag: 'GERMAN ENGINEERING',
+    desc: 'Arquitectura de aplicaciones web, sistemas de gestión interna (ERP/CRM) y plataformas operativas diseñadas para digitalizar flujos de trabajo de punta a punta.',
+    features: [
+      'Sistemas de gestión interna y control de inventarios',
+      'Dashboards y paneles de analítica en tiempo real',
+      'Integración de APIs, webhooks y bases de datos',
+      'Seguridad, estabilidad y escalabilidad sin caídas',
+    ],
+    bgImage: '/img/tech-mkt-2.jpg',
+  },
+  {
+    number: '03',
+    title: 'Automatización & Inteligencia Artificial',
+    tag: 'AI & WORKFLOWS',
+    desc: 'Implementamos agentes de IA y flujos automatizados para eliminar tareas manuales repetitivas, acelerar respuestas a clientes y reducir costos operacionales.',
+    features: [
+      'Automatización de procesos comerciales y facturación',
+      'Asistentes y bots con IA sincronizados a WhatsApp/CRM',
+      'Clasificación y extracción inteligente de documentos',
+      'Ahorro comprobado de horas de trabajo administrativo',
+    ],
+    bgImage: '/img/tech-mkt-3.jpg',
+  },
+  {
+    number: '04',
+    title: 'Marketing Digital & Analítica Real',
+    tag: 'DATA & ATTRIBUTION',
+    desc: 'Transformamos presupuestos publicitarios en ventas medibles. Planificación y optimización continua en Google Ads y Meta Ads con modelos de atribución claros.',
+    features: [
+      'Campañas de conversión en Meta Ads y Google Ads',
+      'Estrategias de remarketing y captación de leads calificados',
+      'Seguimiento riguroso de eventos y conversiones',
+      'Informes transparentes distinguiendo datos reales de estimaciones',
+    ],
+    bgImage: '/img/tech-mkt-1.jpg',
+  },
+];
+---
+
+<section id="area-digital" class="relative py-24 sm:py-32 bg-obsidian-surface border-t border-white/5 overflow-hidden">
+  
+  <!-- Aura glow -->
+  <div class="absolute bottom-10 left-0 w-96 h-96 bg-brand-neon/10 rounded-full blur-[140px] pointer-events-none"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    
+    <!-- Section Header -->
+    <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-16 gap-8">
+      <div class="max-w-3xl">
+        <div class="reveal-item inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono uppercase tracking-wider text-brand-lavender mb-4">
+          <FlagGermany class="w-4 h-3 rounded-[2px] shadow-sm inline-block" />
+          <span>ÁREA COMERCIAL 02 · TECNOLOGÍA & SOFTWARE (ALEMANIA)</span>
+        </div>
+        <h2 class="reveal-item font-display font-bold text-3xl sm:text-5xl text-white tracking-tight">
+          Ingeniería de Software, Plataformas Web y <br class="hidden sm:inline" />
+          <span class="text-gradient">Automatización con Inteligencia Artificial</span>
+        </h2>
+        <p class="reveal-item text-brand-silver text-base sm:text-lg mt-4 leading-relaxed">
+          Dirigido desde Alemania por nuestro Tech Lead. Diseñamos y programamos soluciones digitales de nivel internacional para empresas que necesitan velocidad, solidez y diferenciación técnica.
+        </p>
+      </div>
+
+      <!-- Action buttons -->
+      <div class="reveal-item flex flex-col sm:flex-row items-start sm:items-center gap-4 flex-shrink-0">
+        <a
+          href="/cotizar?tipo=digital"
+          class="px-6 py-3.5 rounded-full bg-gradient-to-r from-brand-violet to-brand-neon text-white text-xs font-semibold uppercase tracking-wider shadow-lg hover:scale-105 transition-all"
+        >
+          Cotizar Proyecto Digital
+        </a>
+        <a
+          href="https://wa.me/491709020413?text=Hallo%20Jose,%20me%20gustar%C3%ADa%20consultar%20por%20desarrollo%20de%20software%20y%20tecnologia%20para%20mi%20empresa."
+          target="_blank"
+          rel="noopener noreferrer"
+          class="px-6 py-3.5 rounded-full bg-white/5 hover:bg-white/10 border border-white/15 text-white text-xs font-semibold uppercase tracking-wider transition-all inline-flex items-center gap-2"
+        >
+          <FlagGermany class="w-4 h-3 rounded-[2px]" />
+          <span>Hablar con Tech Lead</span>
+          <span class="text-brand-lavender">→</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- 4 Digital Pillars Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {digitalPillars.map((pillar) => (
+        <div class="reveal-item rounded-3xl p-8 flex flex-col justify-between group border border-white/15 hover:border-brand-lavender/60 transition-all duration-300 hover:-translate-y-1 relative overflow-hidden bg-obsidian/45 backdrop-blur-md shadow-2xl">
+          
+          <!-- Ambient Decorative Background Image with Vivid Contrast -->
+          <div class="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
+            <img
+              src={pillar.bgImage}
+              alt=""
+              aria-hidden="true"
+              class="w-full h-full object-cover object-center opacity-55 group-hover:opacity-75 group-hover:scale-105 transition-all duration-700 ease-out filter contrast-125 saturate-110 brightness-90"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/80 to-obsidian/25"></div>
+            <div class="absolute inset-0 bg-black/20"></div>
+          </div>
+
+          <div class="relative z-10">
+            <!-- Top tag and number -->
+            <div class="flex items-center justify-between mb-6">
+              <span class="text-xs font-mono font-bold text-brand-lavender px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-brand-violet/40 shadow-sm">
+                {pillar.tag}
+              </span>
+              <span class="text-2xl font-display font-bold text-white/40 group-hover:text-brand-lavender transition-colors drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                {pillar.number}
+              </span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="font-display font-bold text-2xl text-white mb-3 group-hover:text-brand-lavender transition-colors drop-shadow-[0_2px_8px_rgba(0,0,0,0.95)]">
+              {pillar.title}
+            </h3>
+
+            <p class="text-sm text-gray-200 leading-relaxed mb-6 font-normal drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]">
+              {pillar.desc}
+            </p>
+
+            <!-- Features list -->
+            <ul class="space-y-2.5 text-xs text-white/95 mb-8">
+              {pillar.features.map((feat) => (
+                <li class="flex items-center gap-2.5 drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)]">
+                  <span class="text-brand-lavender font-bold">✓</span>
+                  <span>{feat}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <!-- Bottom Action -->
+          <div class="pt-6 border-t border-white/15 mt-auto flex items-center justify-between relative z-10">
+            <a
+              href="/cotizar?tipo=digital"
+              class="text-xs font-semibold uppercase tracking-wider text-white hover:text-brand-lavender transition-colors flex items-center gap-1.5 drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)]"
+            >
+              <span>Consultar requerimiento</span>
+              <span>→</span>
+            </a>
+            <span class="text-xs text-white/80 font-mono drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)]">Hub Alemania</span>
+          </div>
+
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

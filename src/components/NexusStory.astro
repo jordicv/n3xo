@@ -1,0 +1,207 @@
+---
+// NexusStory Component - Reseña Visual del Puente Chile x Alemania
+import FlagChile from './flags/FlagChile.astro';
+import FlagGermany from './flags/FlagGermany.astro';
+---
+
+<section id="puente-visual" class="relative py-24 sm:py-32 bg-obsidian border-t border-white/5 overflow-hidden">
+  
+  <!-- Subtle Background Glows -->
+  <div class="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 bg-brand-violet/10 rounded-full blur-[140px] pointer-events-none"></div>
+  <div class="absolute top-1/2 right-1/4 -translate-y-1/2 w-96 h-96 bg-brand-neon/10 rounded-full blur-[140px] pointer-events-none"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
+      <div class="reveal-item inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono uppercase tracking-wider text-brand-neon mb-4">
+        <span>MODELO OPERATIVO GLOBAL</span>
+      </div>
+      <h2 class="reveal-item font-display font-bold text-3xl sm:text-5xl tracking-tight text-white mb-6">
+        El puente que conecta <br class="hidden sm:inline" />
+        <span class="inline-flex items-center gap-2.5 sm:gap-3 flex-wrap justify-center mt-2">
+          <span class="text-gradient">Chile</span>
+          <FlagChile class="w-8 h-5 sm:w-10 sm:h-6 rounded shadow-md ring-1 ring-white/10 inline-block align-middle" />
+          <span class="text-white/40">×</span>
+          <span class="text-gradient">Alemania</span>
+          <FlagGermany class="w-8 h-5 sm:w-10 sm:h-6 rounded shadow-md ring-1 ring-white/10 inline-block align-middle" />
+        </span>
+      </h2>
+      <p class="reveal-item text-brand-silver text-base sm:text-lg leading-relaxed">
+        Un modelo con dos divisiones especializadas: presencia y despliegue comercial en vía pública en Chile, junto a la ingeniería y desarrollo de software de vanguardia desde Alemania.
+      </p>
+    </div>
+
+    <!-- Visual Split Grid (Chile vs Germany & Where they meet) -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch mb-16">
+      
+      <!-- Lado Chile (6 cols) -->
+      <div class="reveal-item lg:col-span-6 glass-panel rounded-3xl overflow-hidden flex flex-col justify-between group hover:border-brand-neon/40 transition-all duration-300 relative">
+        <!-- Visual Header Image -->
+        <div class="relative h-48 sm:h-56 w-full overflow-hidden">
+          <img
+            src="/img/ooh-atardecer.png"
+            alt="Soporte publicitario exterior en Chile"
+            class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/40 to-transparent"></div>
+          
+          <div class="absolute top-4 left-4 flex items-center gap-2 px-3 py-1.5 rounded-full bg-obsidian/85 backdrop-blur-md border border-white/15 text-xs font-mono text-white">
+            <FlagChile class="w-4 h-3 rounded-[2px]" />
+            <span>OPERACIÓN CHILE</span>
+          </div>
+
+          <div class="absolute bottom-4 left-6 right-6">
+            <span class="text-[10px] font-mono uppercase tracking-widest text-brand-neon font-semibold">PRESENCIA FÍSICA & MEDIOS</span>
+            <h3 class="font-display font-bold text-2xl text-white">Impacto en Terreno y Negociación</h3>
+          </div>
+        </div>
+
+        <!-- Content Body -->
+        <div class="p-6 sm:p-8 flex flex-col justify-between flex-grow">
+          <p class="text-sm text-brand-silver leading-relaxed mb-6">
+            Liderado por Carola Carrasco y Pame Ortega, con más de 20 años de relaciones consolidadas en el mercado chileno. Gestionamos permisos, montaje de estructuras, comercialización de pantallas y los circuitos de mayor visibilidad en Santiago y Concepción.
+          </p>
+
+          <div class="grid grid-cols-2 gap-3 pt-6 border-t border-white/10 text-xs font-mono text-white/90">
+            <div class="flex items-center gap-2">
+              <span class="text-brand-neon font-bold">✓</span>
+              <span>Gestión de grandes marcas</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-brand-neon font-bold">✓</span>
+              <span>Cobertura nacional</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-brand-neon font-bold">✓</span>
+              <span>Montaje e infraestructura</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-brand-neon font-bold">✓</span>
+              <span>Permisología al día</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lado Alemania (6 cols) -->
+      <div class="reveal-item lg:col-span-6 glass-panel rounded-3xl overflow-hidden flex flex-col justify-between group hover:border-brand-lavender/40 transition-all duration-300 relative">
+        <!-- Visual Header Graphic -->
+        <div class="relative h-48 sm:h-56 w-full overflow-hidden bg-gradient-to-br from-brand-violet/30 via-obsidian to-brand-neon/20 flex items-center justify-center p-6">
+          <div class="w-full max-w-sm rounded-xl bg-obsidian/90 border border-brand-neon/30 p-4 font-mono text-[11px] text-brand-silver shadow-2xl">
+            <div class="flex items-center gap-1.5 mb-2.5 pb-2 border-b border-white/10">
+              <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
+              <span class="text-[10px] text-white/60 ml-2">n3xo_tech_engine.ts (Alemania)</span>
+            </div>
+            <div class="text-brand-lavender">const nexus = new Architecture(&#123;</div>
+            <div class="pl-4 text-white/80">standards: "German Engineering",</div>
+            <div class="pl-4 text-brand-neon">coreVitals: 99.8,</div>
+            <div class="pl-4 text-emerald-400">automation: "AI_Agent_Sync",</div>
+            <div class="text-brand-lavender">&#125;);</div>
+          </div>
+
+          <div class="absolute top-4 left-4 flex items-center gap-2 px-3 py-1.5 rounded-full bg-obsidian/85 backdrop-blur-md border border-white/15 text-xs font-mono text-white">
+            <FlagGermany class="w-4 h-3 rounded-[2px]" />
+            <span>TECH HUB ALEMANIA</span>
+          </div>
+
+          <div class="absolute bottom-4 left-6 right-6">
+            <span class="text-[10px] font-mono uppercase tracking-widest text-brand-lavender font-semibold">SOFTWARE & INNOVACIÓN</span>
+            <h3 class="font-display font-bold text-2xl text-white">Ingeniería, Código & Plataformas</h3>
+          </div>
+        </div>
+
+        <!-- Content Body -->
+        <div class="p-6 sm:p-8 flex flex-col justify-between flex-grow">
+          <p class="text-sm text-brand-silver leading-relaxed mb-6">
+            Liderado por José en Alemania. Aplicamos rigor técnico europeo en cada desarrollo: código limpio, infraestructura web ultra veloz, aplicaciones empresariales escalables y herramientas de automatización con inteligencia artificial.
+          </p>
+
+          <div class="grid grid-cols-2 gap-3 pt-6 border-t border-white/10 text-xs font-mono text-white/90">
+            <div class="flex items-center gap-2">
+              <span class="text-brand-lavender font-bold">✓</span>
+              <span>Webs corporativas 95+ Vitals</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-brand-lavender font-bold">✓</span>
+              <span>Software empresarial a medida</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-brand-lavender font-bold">✓</span>
+              <span>Flujos con Inteligencia Artificial</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-brand-lavender font-bold">✓</span>
+              <span>Medición con datos reales</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Concluding Banner: Dos Divisiones Especializadas -->
+    <div class="reveal-item rounded-3xl p-8 sm:p-12 border border-white/15 bg-gradient-to-br from-brand-violet/20 via-obsidian-surface to-brand-neon/15 relative overflow-hidden shadow-2xl">
+      
+      <!-- Ambient Decorative Background Image -->
+      <div class="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
+        <img
+          src="/img/concepcion-altura.jpg"
+          alt=""
+          aria-hidden="true"
+          class="w-full h-full object-cover object-center opacity-40 filter contrast-125 saturate-110 brightness-90"
+          loading="lazy"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-obsidian via-obsidian/85 to-obsidian/75"></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+        <div class="lg:col-span-8">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-[11px] font-mono text-brand-neon uppercase tracking-wider mb-4 shadow-sm">
+            <svg class="w-3.5 h-3.5 text-brand-neon flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd" />
+            </svg>
+            <span>DOS DIVISIONES · UN SOLO ESTÁNDAR DE EXCELENCIA</span>
+          </div>
+          <h3 class="font-display font-bold text-2xl sm:text-4xl text-white mb-4 drop-shadow-[0_2px_8px_rgba(0,0,0,0.95)]">
+            Especialistas dedicados para cada necesidad de tu empresa
+          </h3>
+          <p class="text-sm sm:text-base text-gray-200 leading-relaxed mb-6 max-w-2xl font-normal drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]">
+            Si necesitas presencia masiva en las ciudades y carreteras de Chile, cuentas con circuitos urbanos estratégicos y gestión directa de soportes. Si necesitas software, sitios web o automatización de procesos, cuentas con ingeniería de vanguardia desarrollada desde Alemania. Cada división opera con foco técnico independiente.
+          </p>
+          <div class="flex flex-wrap gap-3 text-xs font-mono text-white/90">
+            <span class="px-3 py-1.5 rounded-lg bg-black/60 backdrop-blur-md border border-white/15 shadow-sm">✓ Vía Pública: Negociación & Terreno</span>
+            <span class="px-3 py-1.5 rounded-lg bg-black/60 backdrop-blur-md border border-white/15 shadow-sm">✓ Digital: Sistemas & Automatización</span>
+            <span class="px-3 py-1.5 rounded-lg bg-black/60 backdrop-blur-md border border-brand-neon/40 text-brand-neon shadow-sm">✓ Asesoría Directa sin Intermediarios</span>
+          </div>
+        </div>
+
+        <div class="lg:col-span-4 flex flex-col justify-center items-start lg:items-end gap-3.5">
+          <a
+            href="/cotizar?tipo=ooh"
+            class="px-7 py-3.5 rounded-full bg-gradient-to-r from-brand-violet to-brand-neon text-white text-xs font-semibold uppercase tracking-wider shadow-lg hover:scale-105 active:scale-95 transition-all w-full sm:w-auto text-center"
+          >
+            Cotizar Vía Pública (Chile)
+          </a>
+          <a
+            href="/cotizar?tipo=digital"
+            class="px-7 py-3.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/25 text-white text-xs font-semibold uppercase tracking-wider transition-all w-full sm:w-auto text-center backdrop-blur-md shadow-md"
+          >
+            Cotizar Software & Web (Alemania)
+          </a>
+          <a
+            href="/nosotros"
+            class="text-xs text-white/80 hover:text-white transition-colors text-center w-full sm:w-auto pt-1"
+          >
+            Conocer al Equipo →
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>

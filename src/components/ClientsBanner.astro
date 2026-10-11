@@ -1,0 +1,67 @@
+---
+// ClientsBanner Component - Franja de Marcas y Confianza
+const clients = [
+  {
+    name: 'Copec',
+    src: '/logos_clientes/Copec_Logo_2023.svg',
+    className: 'h-7 sm:h-8 w-auto brightness-0 invert opacity-80 hover:opacity-100 transition-opacity',
+  },
+  {
+    name: 'Mobil',
+    src: '/logos_clientes/Mobil TM Logo.png',
+    className: 'h-6 sm:h-7 w-auto brightness-0 invert opacity-80 hover:opacity-100 transition-opacity',
+  },
+  {
+    name: 'Walmart',
+    src: '/logos_clientes/Walmart-Logo.png',
+    className: 'h-7 sm:h-8 w-auto brightness-0 invert opacity-80 hover:opacity-100 transition-opacity',
+  },
+  {
+    name: 'Inacap',
+    src: '/logos_clientes/Logotipo_Inacap.svg.webp',
+    className: 'h-7 sm:h-8 w-auto brightness-0 invert opacity-80 hover:opacity-100 transition-opacity',
+  },
+  {
+    name: 'Universidad Técnica Federico Santa María',
+    src: '/logos_clientes/logo-usm_blanco.svg',
+    className: 'h-8 sm:h-9 w-auto opacity-80 hover:opacity-100 transition-opacity',
+  },
+  {
+    name: 'Universidad San Sebastián',
+    src: '/logos_clientes/logo-uss-admision.png',
+    className: 'h-7 sm:h-8 w-auto brightness-0 invert opacity-80 hover:opacity-100 transition-opacity',
+  },
+  {
+    name: 'Biwiser',
+    src: '/logos_clientes/biwiser.png',
+    className: 'h-6 sm:h-7 w-auto brightness-0 invert opacity-80 hover:opacity-100 transition-opacity',
+  },
+];
+---
+
+<section class="relative py-12 bg-obsidian-surface/80 border-y border-white/5 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="text-center mb-8">
+      <p class="text-[11px] font-mono uppercase tracking-[0.2em] text-brand-silver/80">
+        Marcas e instituciones de primer nivel que confían en nuestra gestión y circuitos publicitarios
+      </p>
+    </div>
+
+    <!-- Client Logos Flex Grid -->
+    <div class="flex flex-wrap items-center justify-center gap-8 sm:gap-12 md:gap-16">
+      {clients.map((client) => (
+        <div class="flex items-center justify-center p-2 grayscale hover:grayscale-0 transition-all duration-300">
+          <img
+            src={client.src}
+            alt={client.name}
+            class={client.className}
+            loading="lazy"
+            height="36"
+          />
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

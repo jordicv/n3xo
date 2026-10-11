@@ -1,5 +1,7 @@
 ---
 // Hero Component
+import FlagChile from './flags/FlagChile.astro';
+import FlagGermany from './flags/FlagGermany.astro';
 ---
 
 <section class="relative min-h-[100dvh] w-full flex items-center justify-center overflow-hidden pt-20">
@@ -37,49 +39,149 @@
         <span class="relative inline-flex rounded-full h-2 w-2 sm:h-2.5 sm:w-2.5 bg-brand-neon shadow-[0_0_10px_#C45BFF]"></span>
       </span>
       <span class="text-[10px] sm:text-xs md:text-sm font-mono font-bold tracking-normal sm:tracking-wider uppercase text-white whitespace-nowrap drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)]">
-        +20 AÑOS DE EXPERIENCIA <span class="text-brand-neon/70 mx-1">·</span> <span class="text-brand-neon">CHILE × ALEMANIA</span>
+        +<span id="hero-exp-counter" class="inline-block tabular-nums font-bold">0</span> AÑOS DE EXPERIENCIA <span class="text-brand-neon/70 mx-1">·</span> <span class="text-brand-neon">ESTRATEGIAS QUE CONECTAN</span>
       </span>
     </div>
 
     <!-- Main Headline with Fluid Clamp Typography -->
     <h1 class="reveal-item font-display font-bold text-4xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight text-white max-w-5xl leading-[1.08] mb-6 drop-shadow-[0_4px_24px_rgba(0,0,0,0.9)]">
-      Conectamos marcas con el mundo <span class="text-gradient">físico y digital</span>.
+      Estrategias que conectan: <span class="text-gradient">Vía Pública & Software</span>.
     </h1>
 
     <!-- Subtitle -->
     <p class="reveal-item text-base sm:text-xl md:text-2xl text-white/90 max-w-3xl font-normal leading-relaxed mb-10 drop-shadow-[0_2px_12px_rgba(0,0,0,0.95)]">
-      Más de 20 años de experiencia y trayectoria en publicidad exterior de alto impacto en Chile, integrados con ingeniería de software moderna e innovación digital desde Alemania.
+      Presencia de alto impacto en las ciudades de Chile e ingeniería de software moderna desarrollada desde Alemania. Dos áreas independientes y especializadas para potenciar el alcance y la tecnología de tu empresa.
     </p>
 
-    <!-- Dual Action Buttons -->
-    <div class="reveal-item flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-md sm:max-w-none mb-16">
-      
-      <!-- Primary: OOH Explorer -->
-      <a
-        href="/servicios/ooh"
-        class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-sm font-semibold tracking-wide uppercase text-white rounded-full bg-gradient-to-r from-brand-violet to-brand-neon hover:shadow-[0_0_30px_rgba(114,0,255,0.5)] transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] group"
-      >
-        <span>Explorar Soportes Vía Pública</span>
-        <svg class="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-        </svg>
-      </a>
+    <!-- 2-Portal Decision Selector (Bifurcación Inmediata de Entrada) -->
+    <div class="reveal-item w-full max-w-4xl mx-auto mb-12">
+      <div class="text-[11px] font-mono uppercase tracking-[0.2em] text-brand-silver/90 mb-4 text-center">
+        ¿Qué solución necesita tu empresa hoy?
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 text-left">
+        
+        <!-- Portal 1: Publicidad en Vía Pública (Chile) -->
+        <div class="rounded-3xl p-6 sm:p-7 flex flex-col justify-between border border-white/20 hover:border-brand-neon/80 transition-all duration-300 hover:-translate-y-1 group shadow-2xl relative overflow-hidden bg-obsidian/40 backdrop-blur-md">
+          <!-- Decorative Background Image with Rich Contrast -->
+          <div class="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
+            <img
+              src="/img/ooh-atardecer.png"
+              alt=""
+              aria-hidden="true"
+              class="w-full h-full object-cover object-center opacity-65 group-hover:opacity-85 group-hover:scale-105 transition-all duration-700 ease-out filter contrast-125 saturate-125 brightness-95"
+              loading="lazy"
+            />
+            <!-- Gradient protecting text while letting the top visual shine -->
+            <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/75 to-obsidian/20"></div>
+            <div class="absolute inset-0 bg-black/20"></div>
+          </div>
 
-      <!-- Secondary: Digital Solutions -->
-      <a
-        href="/servicios/digital"
-        class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-sm font-semibold tracking-wide uppercase text-white rounded-full bg-obsidian/85 border border-white/20 hover:bg-obsidian hover:border-brand-lavender/60 backdrop-blur-xl transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] shadow-lg"
-      >
-        <span>Digital & Plataformas Web</span>
-      </a>
+          <div class="relative z-10">
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-10 h-10 rounded-2xl bg-black/65 backdrop-blur-md border border-white/20 flex items-center justify-center text-brand-neon shadow-lg group-hover:border-brand-neon/50 group-hover:scale-105 transition-all">
+                <svg class="w-5 h-5 text-brand-neon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="3" width="20" height="12" rx="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="15" x2="12" y2="21"></line>
+                  <path d="m7 11 3-3 4 4 3-3"></path>
+                </svg>
+              </div>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-[10px] font-mono text-brand-neon uppercase tracking-wider font-semibold shadow-md">
+                <FlagChile class="w-3.5 h-2.5 rounded-[1px]" />
+                <span>OPERACIÓN CHILE</span>
+              </span>
+            </div>
+            <h2 class="font-display font-bold text-xl sm:text-2xl text-white mb-2 group-hover:text-brand-neon transition-colors drop-shadow-[0_2px_8px_rgba(0,0,0,0.95)]">
+              Publicidad en Vía Pública
+            </h2>
+            <p class="text-xs sm:text-sm text-gray-200 font-medium leading-relaxed mb-5 drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]">
+              Soportes fijos, vallas carreteras, pantallas LED de alta resolución, flotas móviles y proyectos especiales en Chile.
+            </p>
+            <div class="flex flex-wrap gap-1.5 mb-6 text-[10px] font-mono text-white/90">
+              <span class="px-2.5 py-1 rounded-md bg-black/65 backdrop-blur-md border border-white/15 shadow-sm">Soportes Fijos</span>
+              <span class="px-2.5 py-1 rounded-md bg-black/65 backdrop-blur-md border border-white/15 shadow-sm">Pantallas LED</span>
+              <span class="px-2.5 py-1 rounded-md bg-black/65 backdrop-blur-md border border-white/15 shadow-sm">Flotas & Lunetas</span>
+              <span class="px-2.5 py-1 rounded-md bg-black/65 backdrop-blur-md border border-white/15 shadow-sm">Building Wraps</span>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-white/15 flex items-center justify-between gap-3 relative z-10">
+            <a
+              href="#via-publica"
+              class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-violet to-brand-neon text-white text-xs font-semibold uppercase tracking-wider hover:scale-[1.02] transition-all shadow-lg"
+            >
+              <span>Ver Vía Pública</span>
+              <span>↓</span>
+            </a>
+            <a
+              href="/servicios/ooh"
+              class="text-xs text-white/80 hover:text-white transition-colors drop-shadow-[0_1px_4px_rgba(0,0,0,0.9)]"
+            >
+              Catálogo completo →
+            </a>
+          </div>
+        </div>
 
-      <!-- Tertiary: Phygital Spotlight -->
-      <a
-        href="/servicios/integracion"
-        class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-4 text-sm font-semibold tracking-wide uppercase text-brand-neon hover:text-white rounded-full bg-obsidian/85 border border-brand-neon/40 hover:bg-brand-neon/20 hover:border-brand-neon backdrop-blur-xl transition-all duration-300 shadow-lg"
-      >
-        <span class="mr-2">✦</span> Campañas Phygital 360°
-      </a>
+        <!-- Portal 2: Soluciones Digitales & Software (Alemania) -->
+        <div class="rounded-3xl p-6 sm:p-7 flex flex-col justify-between border border-white/20 hover:border-brand-lavender/80 transition-all duration-300 hover:-translate-y-1 group shadow-2xl relative overflow-hidden bg-obsidian/40 backdrop-blur-md">
+          <!-- Decorative Background Image with Rich Contrast -->
+          <div class="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
+            <img
+              src="/img/tech-mkt-1.jpg"
+              alt=""
+              aria-hidden="true"
+              class="w-full h-full object-cover object-center opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700 ease-out filter contrast-125 saturate-110 brightness-90"
+              loading="lazy"
+            />
+            <!-- Gradient protecting text while letting the top visual shine -->
+            <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/75 to-obsidian/20"></div>
+            <div class="absolute inset-0 bg-black/20"></div>
+          </div>
+
+          <div class="relative z-10">
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-10 h-10 rounded-2xl bg-black/65 backdrop-blur-md border border-white/20 flex items-center justify-center text-brand-lavender shadow-lg group-hover:border-brand-lavender/50 group-hover:scale-105 transition-all">
+                <svg class="w-5 h-5 text-brand-lavender" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                  <line x1="14" y1="4" x2="10" y2="20"></line>
+                </svg>
+              </div>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-[10px] font-mono text-brand-lavender uppercase tracking-wider font-semibold shadow-md">
+                <FlagGermany class="w-3.5 h-2.5 rounded-[1px]" />
+                <span>TECH HUB ALEMANIA</span>
+              </span>
+            </div>
+            <h2 class="font-display font-bold text-xl sm:text-2xl text-white mb-2 group-hover:text-brand-lavender transition-colors drop-shadow-[0_2px_8px_rgba(0,0,0,0.95)]">
+              Sistemas, Web & Software
+            </h2>
+            <p class="text-xs sm:text-sm text-gray-200 font-medium leading-relaxed mb-5 drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]">
+              Ingeniería de software desde Alemania. Páginas web corporativas, plataformas y sistemas a medida, automatización e Inteligencia Artificial.
+            </p>
+            <div class="flex flex-wrap gap-1.5 mb-6 text-[10px] font-mono text-white/90">
+              <span class="px-2.5 py-1 rounded-md bg-black/65 backdrop-blur-md border border-white/15 shadow-sm">Páginas Web</span>
+              <span class="px-2.5 py-1 rounded-md bg-black/65 backdrop-blur-md border border-white/15 shadow-sm">Sistemas a Medida</span>
+              <span class="px-2.5 py-1 rounded-md bg-black/65 backdrop-blur-md border border-white/15 shadow-sm">Automatización con IA</span>
+              <span class="px-2.5 py-1 rounded-md bg-black/65 backdrop-blur-md border border-white/15 shadow-sm">Software Empresarial</span>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-white/15 flex items-center justify-between gap-3 relative z-10">
+            <a
+              href="#area-digital"
+              class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white/15 hover:bg-white/25 border border-white/25 backdrop-blur-md text-white text-xs font-semibold uppercase tracking-wider hover:scale-[1.02] transition-all shadow-lg"
+            >
+              <span>Ver Software & Web</span>
+              <span>↓</span>
+            </a>
+            <a
+              href="/servicios/digital"
+              class="text-xs text-white/80 hover:text-white transition-colors drop-shadow-[0_1px_4px_rgba(0,0,0,0.9)]"
+            >
+              Catálogo completo →
+            </a>
+          </div>
+        </div>
+
+      </div>
     </div>
 
     <!-- Live Credibility Metrics Strip -->
@@ -88,28 +190,28 @@
       <div class="glass-panel rounded-2xl p-4 sm:p-5 transition-transform duration-300 hover:-translate-y-1">
         <div class="flex items-center gap-2 text-brand-neon mb-1 text-xs font-mono uppercase tracking-wider">
           <span class="w-2 h-2 rounded-full bg-brand-neon"></span>
-          +20 Años de Trayectoria
+          Cobertura & Terreno
         </div>
-        <div class="text-lg sm:text-xl font-display font-semibold text-white">Experiencia Comprobada</div>
-        <div class="text-xs text-brand-silver mt-1">Más de dos décadas gestionando vía pública y relaciones comerciales sólidas en Chile.</div>
+        <div class="text-lg sm:text-xl font-display font-semibold text-white">Marketing en Vía Pública (Chile)</div>
+        <div class="text-xs text-brand-silver mt-1">Soportes estratégicos, vallas, pantallas LED y circuitos de alto tráfico.</div>
       </div>
 
       <div class="glass-panel rounded-2xl p-4 sm:p-5 transition-transform duration-300 hover:-translate-y-1">
         <div class="flex items-center gap-2 text-brand-lavender mb-1 text-xs font-mono uppercase tracking-wider">
           <span class="w-2 h-2 rounded-full bg-brand-lavender"></span>
-          Ingeniería Alemana
+          Ingeniería de Software
         </div>
-        <div class="text-lg sm:text-xl font-display font-semibold text-white">Software & Web a Medida</div>
-        <div class="text-xs text-brand-silver mt-1">Plataformas escalables, e-commerce, automatización e IA.</div>
+        <div class="text-lg sm:text-xl font-display font-semibold text-white">Sistemas, Web & IA (Alemania)</div>
+        <div class="text-xs text-brand-silver mt-1">Páginas web ultrarrápidas, plataformas a medida y automatizaciones inteligentes.</div>
       </div>
 
       <div class="glass-panel rounded-2xl p-4 sm:p-5 transition-transform duration-300 hover:-translate-y-1">
-        <div class="flex items-center gap-2 text-brand-violet mb-1 text-xs font-mono uppercase tracking-wider">
-          <span class="w-2 h-2 rounded-full bg-brand-violet"></span>
-          La Línea Insignia
+        <div class="flex items-center gap-2 text-emerald-400 mb-1 text-xs font-mono uppercase tracking-wider">
+          <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+          Atención Especializada
         </div>
-        <div class="text-lg sm:text-xl font-display font-semibold text-white">Integración Phygital</div>
-        <div class="text-xs text-brand-silver mt-1">Medición de campañas, QR dinámicos, geofencing y analítica.</div>
+        <div class="text-lg sm:text-xl font-display font-semibold text-white">Dos Divisiones Claras</div>
+        <div class="text-xs text-brand-silver mt-1">Interlocutores directos en cada área: sin intermediarios ni conceptos forzados.</div>
       </div>
 
     </div>
@@ -127,3 +229,50 @@
   </div>
 
 </section>
+
+<script>
+  function initExpCounter() {
+    const counterEl = document.getElementById('hero-exp-counter');
+    if (!counterEl) return;
+
+    // Check reduced motion preference
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      counterEl.textContent = '20';
+      return;
+    }
+
+    const target = 20;
+    const duration = 1400; // 1.4s
+    let startTime: number | null = null;
+
+    function step(timestamp: number) {
+      if (!startTime) startTime = timestamp;
+      const progress = Math.min((timestamp - startTime) / duration, 1);
+      
+      // Ease out cubic: 1 - (1 - t)^3
+      const easeOut = 1 - Math.pow(1 - progress, 3);
+      const current = Math.floor(easeOut * target);
+
+      counterEl.textContent = current.toString();
+
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      } else {
+        counterEl.textContent = target.toString();
+      }
+    }
+
+    // Brief delay so user perceives the animation after initial render
+    setTimeout(() => {
+      requestAnimationFrame(step);
+    }, 200);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initExpCounter);
+  } else {
+    initExpCounter();
+  }
+
+  document.addEventListener('astro:page-load', initExpCounter);
+</script>

@@ -4,9 +4,9 @@ const subproducts = [
   {
     id: 'fijos',
     number: '01',
-    title: 'Soportes Fijos & Carreteras',
-    subtitle: 'Paletas urbanas, vallas camineras y monopostes de gran formato.',
-    desc: 'Presencia constante y recordación continua las 24 horas del día. Ubicaciones privilegiadas en las principales arterias comerciales de Santiago, Concepción y rutas interurbanas de Chile.',
+    title: 'Soportes Fijos – OOH',
+    subtitle: 'Diversidad de formatos dentro y fuera de las ciudades.',
+    desc: 'Presencia en puntos estratégicos a nivel nacional.',
     tags: ['Paletas doble cara', 'Vallas camineras', 'Monopostes 24/7', 'Letreros comerciales'],
     idealFor: 'Lanzamientos masivos, posicionamiento de marca y presencia permanente.',
     badge: 'ALTA RECORDACIÓN',
@@ -18,8 +18,8 @@ const subproducts = [
     number: '02',
     title: 'Pantallas LED / DOOH',
     subtitle: 'Digital Out-of-Home dinámico en puntos neurálgicos.',
-    desc: 'Soportes digitales de ultra alta definición con reproducción de video y animación. Flexibilidad total de pauta: rotación de spots por franjas horarias y actualización de contenidos en tiempo real.',
-    tags: ['Resolución 4K/HD', 'Video dinámico', 'Franjas horarias', 'Circuitos sincronizados'],
+    desc: 'Soportes digitales de gran visibilidad en ubicaciones estratégicas con flexibilidad de pauta y actualización de contenido en tiempo real.',
+    tags: [],
     idealFor: 'Campañas ágiles, ofertas temporales, retail y marcas de consumo masivo.',
     badge: 'DINÁMICO & FLEXIBLE',
     link: '/servicios/ooh#dooh',
@@ -63,14 +63,13 @@ const subproducts = [
     <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-16 gap-8">
       <div class="max-w-3xl">
         <div class="reveal-item inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono uppercase tracking-wider text-brand-neon mb-4">
-          <span>ÁREA COMERCIAL 01 · VÍA PÚBLICA (CHILE)</span>
+          <span>VÍA PÚBLICA</span>
         </div>
         <h2 class="reveal-item font-display font-bold text-3xl sm:text-5xl text-white tracking-tight">
-          Marketing en Vía Pública Acotado en <br class="hidden sm:inline" />
-          <span class="text-gradient">Servicios Claros</span>
+          Estrategias en <span class="text-gradient">Vía Pública</span>
         </h2>
         <p class="reveal-item text-brand-silver text-base sm:text-lg mt-4 leading-relaxed">
-          Sin enredos ni información sobrecargada. Estructuramos nuestro catálogo en los servicios de mayor impacto y cotización en el mercado publicitario chileno.
+          Somos especialistas en publicidad en vía pública en regiones. Conectamos cada campaña con ubicaciones estratégicas y de alto alcance para potenciar la presencia de cada marca.
         </p>
       </div>
 
@@ -130,13 +129,15 @@ const subproducts = [
             </p>
 
             <!-- Tags -->
-            <div class="flex flex-wrap gap-2 mb-6">
-              {sub.tags.map((tag) => (
-                <span class="px-2.5 py-1 rounded-lg bg-black/65 backdrop-blur-md text-[11px] font-mono text-white/90 border border-white/15 shadow-sm">
-                  {tag}
-                </span>
-              ))}
-            </div>
+            {sub.tags.length > 0 && (
+              <div class="flex flex-wrap gap-2 mb-6">
+                {sub.tags.map((tag) => (
+                  <span class="px-2.5 py-1 rounded-lg bg-black/65 backdrop-blur-md text-[11px] font-mono text-white/90 border border-white/15 shadow-sm">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            )}
 
             <!-- Ideal for callout -->
             <div class="p-3.5 rounded-xl bg-black/60 backdrop-blur-md border border-white/10 text-xs text-gray-300 mb-8 shadow-sm">

@@ -247,8 +247,8 @@ import FlagGermany from './flags/FlagGermany.astro';
       `• *Mensaje:* ${message}`
     );
 
-    // If digital, offer Germany or Chile; default to Chile commercial team
-    const targetWa = (serviceType && serviceType.includes('Digital')) ? '491709020413' : '56932346724';
+    // Software goes to Germany; default to Chile commercial team
+    const targetWa = (serviceType && serviceType.includes('Alemania')) ? '491709020413' : '56932346724';
 
     submitBtn.classList.add('opacity-50', 'pointer-events-none');
     submitBtn.innerHTML = 'Procesando...';

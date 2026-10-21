@@ -10,35 +10,52 @@ const {
   title = "N3XO.CL — OOH + DIGITAL | Marketing en Vía Pública y Tecnología",
   description = "Conectamos marcas con el mundo físico y digital. Estrategia y operación de marketing en vía pública (OOH/DOOH) en Chile × Ingeniería de software e innovación desde Alemania.",
 } = Astro.props;
+
+const canonical = new URL(Astro.url.pathname.replace(/\/$/, '') || '/', Astro.site).href;
+const ogImage = new URL('/videos/banner_poster.jpg', Astro.site).href;
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: 'N3XO',
+  url: 'https://n3xo.cl/',
+  logo: 'https://n3xo.cl/logos/n3xo-logo-white-purple.webp',
+  image: ogImage,
+  description: 'Publicidad en vía pública en Concepción y todo Chile, y soluciones digitales desde Alemania.',
+  telephone: '+56932346724',
+  email: 'carola.carrasco@n3xo.cl',
+  address: { '@type': 'PostalAddress', addressLocality: 'Concepción', addressRegion: 'Biobío', addressCountry: 'CL' },
+  areaServed: 'CL',
+};
 ---
 
 <!doctype html>
-<html lang="es" class="scroll-smooth">
+<html lang="es-CL" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <link rel="icon" type="image/png" href="/logos/n3xo-logo-purple.png" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="generator" content={Astro.generator} />
     
     <!-- Primary Meta Tags -->
     <title>{title}</title>
-    <meta name="title" content={title} />
     <meta name="description" content={description} />
-    <meta name="keywords" content="marketing en via publica chile, publicidad exterior chile, pantallas led chile, vallas publicitarias concepcion, soportes ooh chile, dooh, desarrollo web, software chile alemania, n3xo" />
-    <meta name="author" content="N3XO" />
+    <link rel="canonical" href={canonical} />
+    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
 
     <!-- Open Graph / Facebook / LinkedIn -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://n3xo.cl/" />
+    <meta property="og:site_name" content="N3XO" />
+    <meta property="og:locale" content="es_CL" />
+    <meta property="og:url" content={canonical} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content="/videos/banner_poster.jpg" />
+    <meta property="og:image" content={ogImage} />
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:title" content={title} />
-    <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content="/videos/banner_poster.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
 
     <!-- Google Fonts: Space Grotesk & Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />

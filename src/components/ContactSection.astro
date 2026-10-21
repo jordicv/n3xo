@@ -72,7 +72,7 @@ import FlagGermany from './flags/FlagGermany.astro';
                 <span>Tech Hub Alemania</span>
                 <FlagGermany class="w-4 h-3 rounded-[2px] shadow-sm inline-block" />
               </span>
-              <span class="text-[10px] text-brand-silver font-mono">Software & I+D</span>
+              <span class="text-[10px] text-brand-silver font-mono">Digital & Software</span>
             </div>
             <div class="text-white text-sm font-semibold mb-2">Ingeniería, Plataformas Web & Consultoría</div>
             <div class="flex flex-col gap-1 text-xs text-brand-silver">
@@ -224,7 +224,6 @@ import FlagGermany from './flags/FlagGermany.astro';
 <script is:inline>
   const form = document.getElementById('contact-form');
   const successMsg = document.getElementById('form-success');
-  const submitBtn = document.getElementById('submit-btn');
 
   form?.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -250,17 +249,20 @@ import FlagGermany from './flags/FlagGermany.astro';
     // Software goes to Germany; default to Chile commercial team
     const targetWa = (serviceType && serviceType.includes('Alemania')) ? '491709020413' : '56932346724';
 
-    submitBtn.classList.add('opacity-50', 'pointer-events-none');
-    submitBtn.innerHTML = 'Procesando...';
-
-    setTimeout(() => {
-      form.reset();
-      submitBtn.classList.remove('opacity-50', 'pointer-events-none');
-      submitBtn.innerHTML = 'Enviar Solicitud de Propuesta';
-      successMsg.classList.remove('hidden');
-
-      // Open WhatsApp in new tab for immediate contact
-      window.open(`https://wa.me/${targetWa}?text=${text}`, '_blank');
-    }, 600);
+    // Open synchronously inside the submit gesture so browsers don't block it as a popup
+    const waUrl = `https://wa.me/${targetWa}?text=${text}`;
+    if (!window.open(waUrl, '_blank')) window.location.href = waUrl;
+    form.reset();
+    successMsg.classList.remove('hidden');
   });
+
+  // Prefill from links like /cotizar?tipo=digital or /cotizar?tipo=ooh&sub=pantallas
+  const params = new URLSearchParams(location.search);
+  if (params.get('tipo') === 'digital') {
+    form.querySelector('input[value*="Alemania"]').checked = true;
+  }
+  const subNames = { fijos: 'Soportes fijos', pantallas: 'Pantallas LED', movil: 'Publicidad móvil', especiales: 'Proyectos especiales' };
+  if (subNames[params.get('sub')]) {
+    document.getElementById('contact-message').value = `Formato de interés: ${subNames[params.get('sub')]}\n`;
+  }
 </script>

@@ -14,11 +14,11 @@ import FlagGermany from './flags/FlagGermany.astro';
       loop
       muted
       playsinline
-      poster="/videos/banner_poster.jpg"
+      poster="/videos/banner_poster.webp"
       class="absolute inset-0 w-full h-full object-cover object-center scale-105 transition-transform duration-1000 ease-out"
     >
-      <source src="/videos/banner_1080p.webm" type="video/webm" />
-      <source src="/videos/banner_1080p.mp4" type="video/mp4" />
+      <source src="/videos/banner_1080p.webm" type="video/webm" media="(min-width: 768px)" />
+      <source src="/videos/banner_1080p.mp4" type="video/mp4" media="(min-width: 768px)" />
       <source src="/videos/banner_720p.mp4" type="video/mp4" />
     </video>
 
@@ -65,7 +65,7 @@ import FlagGermany from './flags/FlagGermany.astro';
           <!-- Decorative Background Image with Rich Contrast -->
           <div class="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
             <img
-              src="/img/ooh-atardecer.png"
+              src="/img/ooh-atardecer.webp"
               alt=""
               aria-hidden="true"
               class="w-full h-full object-cover object-center opacity-65 group-hover:opacity-85 group-hover:scale-105 transition-all duration-700 ease-out filter contrast-125 saturate-125 brightness-95"
@@ -126,7 +126,7 @@ import FlagGermany from './flags/FlagGermany.astro';
           <!-- Decorative Background Image with Rich Contrast -->
           <div class="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
             <img
-              src="/img/tech-mkt-1.jpg"
+              src="/img/tech-mkt-1.webp"
               alt=""
               aria-hidden="true"
               class="w-full h-full object-cover object-center opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700 ease-out filter contrast-125 saturate-110 brightness-90"
@@ -152,10 +152,10 @@ import FlagGermany from './flags/FlagGermany.astro';
               </span>
             </div>
             <h2 class="font-display font-bold text-xl sm:text-2xl text-white mb-2 group-hover:text-brand-lavender transition-colors drop-shadow-[0_2px_8px_rgba(0,0,0,0.95)]">
-              Sistemas, Web & Software
+              Digital
             </h2>
             <p class="text-xs sm:text-sm text-gray-200 font-medium leading-relaxed mb-5 drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]">
-              Ingeniería de software desde Alemania. Páginas web corporativas, plataformas y sistemas a medida, automatización e Inteligencia Artificial.
+              Páginas web, sistemas a medida, automatización e inteligencia artificial, desde Alemania.
             </p>
             <div class="flex flex-wrap gap-1.5 mb-6 text-[10px] font-mono text-white/90">
               <span class="px-2.5 py-1 rounded-md bg-black/65 backdrop-blur-md border border-white/15 shadow-sm">Páginas Web</span>
@@ -184,43 +184,12 @@ import FlagGermany from './flags/FlagGermany.astro';
       </div>
     </div>
 
-    <!-- Live Credibility Metrics Strip -->
-    <div class="reveal-item w-full max-w-5xl grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-6 pt-6 border-t border-white/10 text-left">
-      
-      <div class="glass-panel rounded-2xl p-4 sm:p-5 transition-transform duration-300 hover:-translate-y-1">
-        <div class="flex items-center gap-2 text-brand-neon mb-1 text-xs font-mono uppercase tracking-wider">
-          <span class="w-2 h-2 rounded-full bg-brand-neon"></span>
-          Cobertura & Terreno
-        </div>
-        <div class="text-lg sm:text-xl font-display font-semibold text-white">Marketing en Vía Pública (Chile)</div>
-        <div class="text-xs text-brand-silver mt-1">Soportes estratégicos, vallas, pantallas LED y circuitos de alto tráfico.</div>
-      </div>
-
-      <div class="glass-panel rounded-2xl p-4 sm:p-5 transition-transform duration-300 hover:-translate-y-1">
-        <div class="flex items-center gap-2 text-brand-lavender mb-1 text-xs font-mono uppercase tracking-wider">
-          <span class="w-2 h-2 rounded-full bg-brand-lavender"></span>
-          Ingeniería de Software
-        </div>
-        <div class="text-lg sm:text-xl font-display font-semibold text-white">Sistemas, Web & IA (Alemania)</div>
-        <div class="text-xs text-brand-silver mt-1">Páginas web ultrarrápidas, plataformas a medida y automatizaciones inteligentes.</div>
-      </div>
-
-      <div class="glass-panel rounded-2xl p-4 sm:p-5 transition-transform duration-300 hover:-translate-y-1">
-        <div class="flex items-center gap-2 text-emerald-400 mb-1 text-xs font-mono uppercase tracking-wider">
-          <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-          Atención Especializada
-        </div>
-        <div class="text-lg sm:text-xl font-display font-semibold text-white">Dos Divisiones Claras</div>
-        <div class="text-xs text-brand-silver mt-1">Interlocutores directos en cada área: sin intermediarios ni conceptos forzados.</div>
-      </div>
-
-    </div>
 
   </div>
 
   <!-- Subtle Scroll Down Indicator -->
   <div class="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 hidden sm:flex flex-col items-center opacity-70 hover:opacity-100 transition-opacity">
-    <a href="#puente" aria-label="Scroll to content" class="flex flex-col items-center gap-2 text-brand-silver hover:text-white">
+    <a href="#via-publica" aria-label="Scroll to content" class="flex flex-col items-center gap-2 text-brand-silver hover:text-white">
       <span class="text-[10px] uppercase font-mono tracking-widest">Scroll</span>
       <div class="w-5 h-9 rounded-full border border-white/20 flex items-start justify-center p-1">
         <div class="w-1.5 h-2 rounded-full bg-brand-neon animate-bounce"></div>

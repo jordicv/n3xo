@@ -22,7 +22,7 @@ const categories = [
     subtitle: 'Impacto visual a gran escala en autopistas, accesos y rutas interurbanas de Chile.',
     icon: 'M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7',
     features: [
-      'Vallas carreteras de formato monumental',
+      'Vallas camineras de gran formato',
       'Monopostes camineros de máxima altura',
       'Soportes en rutas interurbanas y peajes estratégicos',
       'Circuitos de conexión entre ciudades y regiones',
@@ -37,14 +37,14 @@ const categories = [
     subtitle: 'Digital Out-of-Home: dinamismo, movimiento y flexibilidad de pauta horaria.',
     icon: 'M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z',
     features: [
-      'Pantallas LED urbanas y camineras de ultra alta definición',
+      'Pantallas LED urbanas y camineras de alta definición',
       'Publicidad dinámica con reproducción de video y animación',
       'Programación y rotación de contenidos por franjas horarias',
       'Segmentación por días de la semana y horarios peak',
       'Circuitos de pantallas coordinadas en tiempo real',
       'Venta flexible por slots publicitarios e impactos',
     ],
-    highlight: 'Máximo impacto visual contemporáneo con capacidad de actualizar mensajes de forma inmediata.',
+    highlight: 'Gran visibilidad con la posibilidad de actualizar tu mensaje en tiempo real.',
   },
   {
     id: 'especiales',
@@ -56,10 +56,10 @@ const categories = [
       'Instalaciones publicitarias a medida con volumetría 3D',
       'Intervenciones urbanas y ambientaciones en espacios públicos',
       'Branding integral de espacios corporativos y eventos',
-      'Activaciones de marca experienciales en puntos neurálgicos',
+      'Activaciones de marca en ubicaciones de alto flujo',
       'Estructuras arquitectónicas publicitarias personalizadas',
     ],
-    highlight: 'Generación de viralidad orgánica, relaciones públicas y presencia monumental imborrable.',
+    highlight: 'Campañas que sorprenden, generan conversación y dejan huella.',
   },
   {
     id: 'movil',
@@ -119,7 +119,8 @@ const categories = [
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
       {categories.map((cat, idx) => (
         <div
-          class="reveal-item glass-panel rounded-3xl p-6 sm:p-8 flex flex-col justify-between group hover:border-brand-neon/40 transition-all duration-300 hover:-translate-y-1 relative"
+          id={cat.id}
+          class="reveal-item scroll-mt-28 glass-panel rounded-3xl p-6 sm:p-8 flex flex-col justify-between group hover:border-brand-neon/40 transition-all duration-300 hover:-translate-y-1 relative"
         >
           <div>
             <!-- Top Tag & Icon -->

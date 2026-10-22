@@ -9,7 +9,6 @@ const subproducts = [
     desc: 'Presencia en puntos estratégicos a nivel nacional y en regiones.',
     idealFor: 'Lanzamientos masivos, posicionamiento de marca y presencia permanente.',
     badge: 'ALTA RECORDACIÓN',
-    link: '/servicios/ooh#urbanos',
     bgImage: '/img/ooh-atardecer.webp',
   },
   {
@@ -20,7 +19,6 @@ const subproducts = [
     desc: 'Soportes digitales de gran visibilidad en ubicaciones estratégicas con flexibilidad de pauta y actualización de contenido en tiempo real.',
     idealFor: 'Campañas ágiles, ofertas temporales, retail y marcas de consumo masivo.',
     badge: 'DINÁMICO & FLEXIBLE',
-    link: '/servicios/ooh#dooh',
     bgImage: '/img/ciudad-avanza.webp',
   },
   {
@@ -31,7 +29,6 @@ const subproducts = [
     desc: 'Lleva tu mensaje directo a comunas, barrios y avenidas donde no existen soportes fijos tradicionales. Branding de flotas completas o lunetas traseras de alto impacto vehicular y peatonal.',
     idealFor: 'Gran frecuencia de impacto, cobertura geográfica amplia y presupuestos eficientes.',
     badge: 'COBERTURA EN MOVIMIENTO',
-    link: '/servicios/ooh#movil',
     bgImage: '/img/concepcion-altura.webp',
   },
   {
@@ -42,48 +39,18 @@ const subproducts = [
     desc: 'Lo que el cliente imagina, lo implementamos: grandes telas en fachadas de edificios, estructuras a medida e intervenciones urbanas que sorprenden.',
     idealFor: 'Lanzamientos, eventos y campañas que buscan dar que hablar.',
     badge: 'PROYECTOS A MEDIDA',
-    link: '/servicios/ooh#especiales',
     bgImage: '/img/udec-altura.webp',
   },
 ];
 ---
 
-<section id="via-publica" class="hidden scroll-mt-20 relative py-24 sm:py-32 bg-obsidian border-t border-white/5 overflow-hidden">
+<section id="via-publica" class="relative py-16 sm:py-20 bg-obsidian border-t border-white/5 overflow-hidden">
   
   <!-- Subtle Glow Background -->
   <div class="absolute top-1/4 right-0 w-96 h-96 bg-brand-violet/10 rounded-full blur-[140px] pointer-events-none"></div>
 
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     
-    <!-- Header -->
-    <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-16 gap-8">
-      <div class="max-w-3xl">
-        <div class="reveal-item inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono uppercase tracking-wider text-brand-neon mb-4">
-          <span>VÍA PÚBLICA</span>
-        </div>
-        <h2 class="reveal-item font-display font-bold text-3xl sm:text-5xl text-white tracking-tight">
-          Estrategias en <span class="text-gradient">Vía Pública</span>
-        </h2>
-        <p class="reveal-item text-brand-silver text-base sm:text-lg mt-4 leading-relaxed">
-          Somos especialistas en publicidad en vía pública en regiones. Conectamos cada campaña con ubicaciones estratégicas y de alto alcance para potenciar la presencia de cada marca.
-        </p>
-      </div>
-
-      <div class="reveal-item flex flex-col sm:flex-row items-start sm:items-center gap-4">
-        <a
-          href="/cotizar?tipo=ooh"
-          class="px-6 py-3.5 rounded-full bg-gradient-to-r from-brand-violet to-brand-neon text-white text-xs font-semibold uppercase tracking-wider shadow-lg hover:scale-105 transition-all"
-        >
-          Cotizar Soporte OOH
-        </a>
-        <a
-          href="/servicios/ooh"
-          class="px-6 py-3.5 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-white text-xs font-semibold uppercase tracking-wider transition-all"
-        >
-          Ver Todos los Circuitos →
-        </a>
-      </div>
-    </div>
 
     <!-- 4 Subproducts Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -139,12 +106,6 @@ const subproducts = [
             >
               <span>Cotizar este formato</span>
               <span>→</span>
-            </a>
-            <a
-              href={sub.link}
-              class="text-xs text-white/80 hover:text-white transition-colors drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)]"
-            >
-              Detalles técnicos
             </a>
           </div>
 

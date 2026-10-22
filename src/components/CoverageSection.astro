@@ -8,13 +8,7 @@ const zones = [
     points: ['Avenidas principales y centros comerciales', 'Autopistas y accesos a Concepción / Talcahuano / San Pedro', 'Pantallas LED en ubicaciones de alto flujo'],
   },
   {
-    name: 'Santiago & Región Metropolitana',
-    badge: 'GRAN ALCANCE',
-    desc: 'Circuitos urbanos de alta visibilidad, avenidas comerciales y conexiones metropolitanas para marcas con foco en penetración masiva.',
-    points: ['Ejes viales de alto tránsito vehicular y peatonal', 'Soportes urbanos y paletas publicitarias', 'Circuitos programados por comunas y sectores'],
-  },
-  {
-    name: 'Resto de Chile & Rutas',
+    name: 'Regiones & Rutas Nacionales',
     badge: 'COBERTURA NACIONAL',
     desc: 'Campañas en cualquier región del país y en las principales rutas y autopistas, con vallas camineras y monopostes de gran formato.',
     points: ['Ruta 5 y principales autopistas concesionadas', 'Campañas en otras regiones a pedido', 'Soportes iluminados, visibles día y noche'],
@@ -40,7 +34,7 @@ const zones = [
     </div>
 
     <!-- Zones Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-16">
       {zones.map((zone) => (
         <div class="reveal-item glass-panel rounded-3xl p-6 sm:p-8 flex flex-col justify-between group hover:border-brand-neon/40 transition-all duration-300 hover:-translate-y-1">
           <div>

@@ -19,17 +19,14 @@ import Footer from '../components/Footer.astro';
     <!-- 1. Hero Cinematográfico con Selector de Entrada (Vía Pública vs. Digital) -->
     <Hero />
 
-    <!-- 2. Franja de Confianza y Marcas (+20 Años de Experiencia) -->
-    <ClientsBanner />
-
-    <!-- 3. Marketing en Vía Pública Acotado en Servicios Concretos -->
+    <!-- 2. Vía Pública y Digital: ocultas hasta que se pincha "Ver Vía Pública" / "Ver Digital" en el hero -->
     <SubproductsOOH />
-
-    <!-- 4. Soluciones Digitales & Tech Hub Alemania (El Área de José) -->
     <TechHubDigital />
 
+    <!-- 3. Nuestros clientes y nuestras agencias -->
+    <ClientsBanner />
 
-    <!-- 5. Banner de Cierre hacia Cotizar -->
+    <!-- 4. Banner de Cierre hacia Cotizar -->
     <section class="py-24 bg-obsidian text-center border-t border-white/5 relative overflow-hidden">
       <!-- Ambient Decorative Background Image -->
       <div class="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
@@ -69,6 +66,23 @@ import Footer from '../components/Footer.astro';
     </section>
 
   </main>
+
+  <script is:inline>
+    // Show only the section picked in the hero, also when arriving with /#via-publica or /#area-digital
+    const panels = ['via-publica', 'area-digital'];
+    const showPanel = (id) => {
+      panels.forEach((p) => document.getElementById(p).classList.toggle('hidden', p !== id));
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    };
+    panels.forEach((id) => {
+      document.querySelectorAll(`a[href="#${id}"]`).forEach((a) => a.addEventListener('click', (e) => {
+        e.preventDefault();
+        history.replaceState(null, '', `#${id}`);
+        showPanel(id);
+      }));
+    });
+    if (panels.includes(location.hash.slice(1))) showPanel(location.hash.slice(1));
+  </script>
 
   <WhatsAppDual />
   <Footer />

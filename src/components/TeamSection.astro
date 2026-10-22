@@ -10,26 +10,28 @@ const team = [
     location: 'Chile',
     isChile: true,
     email: 'carola.carrasco@n3xo.cl',
-    desc: 'Más de 20 años de trayectoria en publicidad, comunicación y gestión de campañas en vía pública, trabajando con universidades, inmobiliarias, agencias de medios y grandes marcas.',
+    desc: 'Empresaria con experiencia en gestión comercial, desarrollo de negocios y asesoría estratégica en diversos sectores. Especialista en negociación, coordinación operativa, gestión de proyectos y desarrollo de relaciones comerciales, con una visión integral orientada a resultados, crecimiento y generación de nuevas oportunidades de negocio.',
+    photo: '/team/carola-carrasco.webp',
     tag: 'ESTRATEGIA & MEDIOS',
   },
   {
-    name: 'Pame Ortega',
+    name: 'Pamela Ortega',
     role: 'CCO · Directora Comercial',
     location: 'Chile',
     isChile: true,
     email: 'pame.ortega@n3xo.cl',
-    desc: 'Más de 20 años de trayectoria comercial gestionando cuentas de marcas líderes, planificación estratégica de medios masivos y coordinación de circuitos OOH en todo el país.',
+    desc: 'Profesional especializada en gestión comercial, desarrollo de negocios y relaciones estratégicas con clientes y agencias. Destaca por su orientación comercial, capacidad de negociación y enfoque en la captación de nuevos clientes, generación de alianzas y crecimiento de oportunidades de negocio.',
+    photo: '/team/pamela-ortega.webp',
     tag: 'COMERCIAL & CLIENTES',
   },
   {
-    name: 'José Valdes',
+    name: 'José Ignacio Valdés',
     role: 'Líder Digital & Tecnología',
     location: 'Alemania',
     isChile: false,
     email: null,
     whatsapp: '491709020413',
-    desc: 'Desde Alemania lidera el área digital: desarrollo de páginas web, sistemas a medida, automatización y nuevas tecnologías.',
+    desc: 'Desarrollador de software con experiencia en proyectos tecnológicos para grandes marcas y empresas internacionales. Actualmente se desempeña en Alemania en el sector de tecnología médica, contribuyendo al desarrollo de soluciones innovadoras para prótesis médicas. Destaca por su capacidad técnica, pensamiento analítico y orientación a la innovación, integrando tecnología y desarrollo de software para crear soluciones de alto impacto.',
     tag: 'DIGITAL · ALEMANIA',
   },
 ];
@@ -74,8 +76,12 @@ const team = [
             </div>
 
             <!-- Avatar Silhouette / Initial Graphic -->
-            <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-brand-violet/30 to-brand-neon/20 border border-brand-neon/30 flex items-center justify-center text-white text-2xl font-display font-bold mb-6 group-hover:scale-105 transition-transform duration-300">
-              {member.name.charAt(0)}
+            <div class="w-20 h-20 rounded-2xl overflow-hidden bg-gradient-to-tr from-brand-violet/30 to-brand-neon/20 border border-brand-neon/30 flex items-center justify-center text-white text-2xl font-display font-bold mb-6 group-hover:scale-105 transition-transform duration-300">
+              {member.photo ? (
+                <img src={member.photo} alt={member.name} width="160" height="160" class="w-full h-full object-cover" loading="lazy" />
+              ) : (
+                member.name.charAt(0)
+              )}
             </div>
 
             <!-- Name and Role -->

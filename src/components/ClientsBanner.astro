@@ -1,67 +1,66 @@
 ---
-// ClientsBanner Component - Franja de Marcas y Confianza
-const clients = [
+// ClientsBanner Component - Nuestros clientes y nuestras agencias
+const groups = [
   {
-    name: 'Copec',
-    src: '/logos_clientes/Copec_Logo_2023.svg',
-    className: 'h-7 sm:h-8 w-auto brightness-0 invert opacity-80 hover:opacity-100 transition-opacity',
+    title: 'Nuestros clientes',
+    box: 'w-32 h-14 sm:w-44 sm:h-20',
+    logos: [
+      ['Universidad Técnica Federico Santa María', '/logos_clientes/logo-usm_blanco.svg'],
+      ['Universidad de Las Américas', '/logos_clientes/udla.png'],
+      ['Universidad Católica de la Santísima Concepción', '/logos_clientes/ucsc.png'],
+      ['Inacap', '/logos_clientes/Logotipo_Inacap.svg.webp'],
+      ['Entel', '/logos_clientes/entel.svg'],
+      ['Casa Marisio', '/logos_clientes/casa-marisio.png'],
+      ['Dog Chow', '/logos_clientes/dog-chow.png'],
+      ['Starken', '/logos_clientes/starken.webp'],
+      ['Coca-Cola', '/logos_clientes/coca-cola.svg'],
+      ['Copec', '/logos_clientes/Copec_Logo_2023.svg'],
+      ['Mobil', '/logos_clientes/Mobil TM Logo.png'],
+      ['Walmart', '/logos_clientes/Walmart-Logo.png'],
+      ['Biwiser', '/logos_clientes/biwiser.png'],
+    ],
   },
   {
-    name: 'Mobil',
-    src: '/logos_clientes/Mobil TM Logo.png',
-    className: 'h-6 sm:h-7 w-auto brightness-0 invert opacity-80 hover:opacity-100 transition-opacity',
-  },
-  {
-    name: 'Walmart',
-    src: '/logos_clientes/Walmart-Logo.png',
-    className: 'h-7 sm:h-8 w-auto brightness-0 invert opacity-80 hover:opacity-100 transition-opacity',
-  },
-  {
-    name: 'Inacap',
-    src: '/logos_clientes/Logotipo_Inacap.svg.webp',
-    className: 'h-7 sm:h-8 w-auto brightness-0 invert opacity-80 hover:opacity-100 transition-opacity',
-  },
-  {
-    name: 'Universidad Técnica Federico Santa María',
-    src: '/logos_clientes/logo-usm_blanco.svg',
-    className: 'h-8 sm:h-9 w-auto opacity-80 hover:opacity-100 transition-opacity',
-  },
-  {
-    name: 'Universidad San Sebastián',
-    src: '/logos_clientes/logo-uss-admision.png',
-    className: 'h-7 sm:h-8 w-auto brightness-0 invert opacity-80 hover:opacity-100 transition-opacity',
-  },
-  {
-    name: 'Biwiser',
-    src: '/logos_clientes/biwiser.png',
-    className: 'h-6 sm:h-7 w-auto brightness-0 invert opacity-80 hover:opacity-100 transition-opacity',
+    title: 'Nuestras agencias',
+    box: 'w-28 h-12 sm:w-40 sm:h-14',
+    logos: [
+      ['OMD', '/logos_agencias/omd.svg'],
+      ['PHD', '/logos_agencias/phd.svg'],
+      ['Hearts & Science', '/logos_agencias/hearts-and-science.svg'],
+      ['IPG Mediabrands', '/logos_agencias/ipg-mediabrands.png'],
+      ['Initiative', '/logos_agencias/initiative.svg'],
+      ['UM', '/logos_agencias/um.webp'],
+      ['Omnicom Media Group', '/logos_agencias/omnicom-media-group.svg'],
+      ['Carat', '/logos_agencias/carat.svg'],
+      ['Dentsu', '/logos_agencias/dentsu.svg'],
+      ['Mediavest Publicis', '/logos_agencias/spark-foundry.png'],
+      ['Briones & Asociados', '/logos_agencias/briones-asociados.png'],
+    ],
   },
 ];
 ---
 
-<section class="relative py-12 bg-obsidian-surface/80 border-y border-white/5 overflow-hidden">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    
-    <div class="text-center mb-8">
-      <p class="text-[11px] font-mono uppercase tracking-[0.2em] text-brand-silver/80">
-        Marcas e instituciones de primer nivel que confían en nuestra gestión y circuitos publicitarios
-      </p>
-    </div>
-
-    <!-- Client Logos Flex Grid -->
-    <div class="flex flex-wrap items-center justify-center gap-8 sm:gap-12 md:gap-16">
-      {clients.map((client) => (
-        <div class="flex items-center justify-center p-2 grayscale hover:grayscale-0 transition-all duration-300">
-          <img
-            src={client.src}
-            alt={client.name}
-            class={client.className}
-            loading="lazy"
-            height="36"
-          />
+<section id="clientes" class="relative py-20 sm:py-24 bg-obsidian-surface/80 border-y border-white/5 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16 sm:space-y-20">
+    {groups.map((group) => (
+      <div>
+        <h2 class="reveal-item font-display font-bold text-2xl sm:text-4xl text-white text-center mb-10 sm:mb-12">
+          {group.title}
+        </h2>
+        <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-8 sm:gap-x-10 sm:gap-y-10">
+          {group.logos.map(([name, src]) => (
+            <div class={`${group.box} flex items-center justify-center`}>
+              <img
+                src={src}
+                alt={name}
+                title={name}
+                class="max-h-full max-w-full object-contain brightness-0 invert opacity-80 hover:opacity-100 transition-opacity"
+                loading="lazy"
+              />
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
-
+      </div>
+    ))}
   </div>
 </section>

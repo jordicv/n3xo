@@ -6,8 +6,7 @@ const subproducts = [
     number: '01',
     title: 'Soportes Fijos – OOH',
     subtitle: 'Diversidad de formatos dentro y fuera de las ciudades.',
-    desc: 'Presencia en puntos estratégicos a nivel nacional.',
-    tags: ['Paletas doble cara', 'Vallas camineras', 'Monopostes 24/7', 'Letreros comerciales'],
+    desc: 'Presencia en puntos estratégicos a nivel nacional y en regiones.',
     idealFor: 'Lanzamientos masivos, posicionamiento de marca y presencia permanente.',
     badge: 'ALTA RECORDACIÓN',
     link: '/servicios/ooh#urbanos',
@@ -19,7 +18,6 @@ const subproducts = [
     title: 'Pantallas LED / DOOH',
     subtitle: 'Publicidad digital en ubicaciones de alto flujo.',
     desc: 'Soportes digitales de gran visibilidad en ubicaciones estratégicas con flexibilidad de pauta y actualización de contenido en tiempo real.',
-    tags: [],
     idealFor: 'Campañas ágiles, ofertas temporales, retail y marcas de consumo masivo.',
     badge: 'DINÁMICO & FLEXIBLE',
     link: '/servicios/ooh#dooh',
@@ -28,10 +26,9 @@ const subproducts = [
   {
     id: 'movil',
     number: '03',
-    title: 'Publicidad Móvil & Lunetas',
-    subtitle: 'Microbuses urbanos, transporte público y flotas corporativas.',
+    title: 'Publicidad Móvil',
+    subtitle: 'Buses urbanos · Colectivos · Vehículos publicitarios',
     desc: 'Lleva tu mensaje directo a comunas, barrios y avenidas donde no existen soportes fijos tradicionales. Branding de flotas completas o lunetas traseras de alto impacto vehicular y peatonal.',
-    tags: ['Lunetas traseras', 'Branding de flotas', 'Transporte urbano', 'Cobertura intercomunal'],
     idealFor: 'Gran frecuencia de impacto, cobertura geográfica amplia y presupuestos eficientes.',
     badge: 'COBERTURA EN MOVIMIENTO',
     link: '/servicios/ooh#movil',
@@ -40,10 +37,9 @@ const subproducts = [
   {
     id: 'especiales',
     number: '04',
-    title: 'Building Wraps & Especiales',
+    title: 'Proyectos Especiales',
     subtitle: 'Intervenciones en edificios y formatos a medida.',
     desc: 'Lo que el cliente imagina, lo implementamos: grandes telas en fachadas de edificios, estructuras a medida e intervenciones urbanas que sorprenden.',
-    tags: ['Building Wraps', 'Intervenciones urbanas', 'Volumetría 3D', 'Activaciones a medida'],
     idealFor: 'Lanzamientos, eventos y campañas que buscan dar que hablar.',
     badge: 'PROYECTOS A MEDIDA',
     link: '/servicios/ooh#especiales',
@@ -52,7 +48,7 @@ const subproducts = [
 ];
 ---
 
-<section id="via-publica" class="relative py-24 sm:py-32 bg-obsidian border-t border-white/5 overflow-hidden">
+<section id="via-publica" class="hidden scroll-mt-20 relative py-24 sm:py-32 bg-obsidian border-t border-white/5 overflow-hidden">
   
   <!-- Subtle Glow Background -->
   <div class="absolute top-1/4 right-0 w-96 h-96 bg-brand-violet/10 rounded-full blur-[140px] pointer-events-none"></div>
@@ -122,22 +118,12 @@ const subproducts = [
             <h3 class="font-display font-bold text-2xl text-white mb-2 group-hover:text-brand-neon transition-colors drop-shadow-[0_2px_8px_rgba(0,0,0,0.95)]">
               {sub.title}
             </h3>
-            <p class="text-xs font-mono text-brand-neon/90 mb-4 drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]">{sub.subtitle}</p>
+            <p class="text-base sm:text-lg font-display font-medium text-brand-neon mb-4 drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]">{sub.subtitle}</p>
             
             <p class="text-sm text-gray-200 leading-relaxed mb-6 font-normal drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]">
               {sub.desc}
             </p>
 
-            <!-- Tags -->
-            {sub.tags.length > 0 && (
-              <div class="flex flex-wrap gap-2 mb-6">
-                {sub.tags.map((tag) => (
-                  <span class="px-2.5 py-1 rounded-lg bg-black/65 backdrop-blur-md text-[11px] font-mono text-white/90 border border-white/15 shadow-sm">
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            )}
 
             <!-- Ideal for callout -->
             <div class="p-3.5 rounded-xl bg-black/60 backdrop-blur-md border border-white/10 text-xs text-gray-300 mb-8 shadow-sm">

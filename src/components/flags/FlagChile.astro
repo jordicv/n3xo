@@ -2,11 +2,6 @@
 interface Props {
   class?: string;
 }
-const { class: className = "w-6 h-4 sm:w-8 sm:h-5 inline-block align-middle rounded-[3px] shadow-sm ring-1 ring-white/10" } = Astro.props;
+const { class: className = "w-6 h-4 sm:w-8 sm:h-5 inline-block align-middle" } = Astro.props;
 ---
-<svg class={className} viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" aria-label="Bandera de Chile">
-  <rect width="600" height="200" fill="#ffffff" />
-  <rect y="200" width="600" height="200" fill="#D52B1E" />
-  <rect width="200" height="200" fill="#0039A6" />
-  <polygon points="100,45 116,92 165,92 125,121 141,168 100,139 59,168 75,121 35,92 84,92" fill="#ffffff" />
-</svg>
+<img src="/flags/chile.webp" alt="Bandera de Chile" width="120" height="91" class={`object-contain ${className}`} />
